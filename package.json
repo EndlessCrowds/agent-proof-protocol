@@ -1,0 +1,13 @@
+{
+  "name": "agent-proof-protocol",
+  "version": "1.0.0",
+  "description": "Agent Proof Protocol",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npx ts-node --esm src/index.ts"
+  },
+  "keywords": [],
+  "author": "Roger Mensah",
+  "license": "ISC"
+}
