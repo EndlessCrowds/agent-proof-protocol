@@ -1,13 +1,21 @@
 {
   "name": "agent-proof-protocol",
-  "version": "1.0.0",
-  "description": "Agent Proof Protocol",
+  "version": "2.1.0",
+  "description": "The Universal Execution Layer for Agentic Commerce. A standardized MCP server to hire human labor (Verify, Fix, Move, Maintain) via one API.",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
     "start": "npx ts-node --esm src/index.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "ai-labor",
+    "task-rabbit",
+    "uber-direct",
+    "field-nation",
+    "mcp-server",
+    "agent-proof-protocol",
+    "ground-truth"
+  ],
   "author": "Roger Mensah",
   "license": "ISC"
 }

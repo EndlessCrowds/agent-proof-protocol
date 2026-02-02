@@ -1,0 +1,53 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Agent Proof Task Dispatch",
+    "type": "object",
+    "properties": {
+        "primitive": {
+            "type": "string",
+            "enum": [
+                "VERIFY",
+                "FIX",
+                "MAINTAIN",
+                "MOVE",
+                "THINK"
+            ],
+            "description": "The category of labor required."
+        },
+        "intent": {
+            "type": "string",
+            "description": "Natural language description (e.g., 'Assemble IKEA Desk')."
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "lat": {
+                    "type": "number"
+                },
+                "long": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "lat",
+                "long"
+            ]
+        },
+        "constraints": {
+            "type": "object",
+            "properties": {
+                "budget": {
+                    "type": "number"
+                },
+                "insurance_required": {
+                    "type": "boolean"
+                }
+            }
+        }
+    },
+    "required": [
+        "primitive",
+        "intent",
+        "location"
+    ]
+}
