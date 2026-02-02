@@ -2,20 +2,29 @@
   "name": "agent-proof-protocol",
   "version": "2.1.0",
   "description": "The Universal Execution Layer for Agentic Commerce. A standardized MCP server to hire human labor (Verify, Fix, Move, Maintain) via one API.",
-  "type": "module",
-  "main": "src/index.ts",
-  "scripts": {
-    "start": "npx ts-node --esm src/index.ts"
-  },
+  "main": "build/index.js",
+  "license": "MIT",
+  "author": "Roger Kwasi Senam Mensah <Endless Crowds LLC>",
   "keywords": [
     "ai-labor",
-    "task-rabbit",
-    "uber-direct",
+    "agentic-commerce",
+    "task-dispatch",
+    "uber-direct-api",
+    "taskrabbit-integration",
     "field-nation",
     "mcp-server",
-    "agent-proof-protocol",
     "ground-truth"
   ],
-  "author": "Roger Mensah",
-  "license": "ISC"
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.5"
+  }
 }
