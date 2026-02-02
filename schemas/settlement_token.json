@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Settlement Token",
+    "description": "The cryptographic proof returned to the Agent to unlock funds.",
+    "type": "object",
+    "properties": {
+        "token_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "linked_request_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "verifier_signature": {
+            "type": "string",
+            "description": "ECDSA signature from the Human Sensor"
+        },
+        "proof_metadata": {
+            "type": "object",
+            "properties": {
+                "wifi_rtt_distance": {
+                    "type": "number"
+                },
+                "device_integrity_score": {
+                    "type": "number"
+                },
+                "liveness_check_passed": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "wifi_rtt_distance",
+                "device_integrity_score",
+                "liveness_check_passed"
+            ]
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "verified",
+                "rejected"
+            ]
+        }
+    },
+    "required": [
+        "token_id",
+        "linked_request_id",
+        "timestamp",
+        "verifier_signature",
+        "proof_metadata",
+        "status"
+    ]
+}

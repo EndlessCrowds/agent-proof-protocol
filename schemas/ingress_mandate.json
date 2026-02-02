@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Ingress Mandate",
+    "description": "Defines how an external agent sends a request to the APP Gateway.",
+    "type": "object",
+    "properties": {
+        "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the request."
+        },
+        "origin_rail": {
+            "type": "string",
+            "enum": [
+                "visa_tap",
+                "google_ap2",
+                "erc_8004"
+            ],
+            "description": "The payment rail originating the request."
+        },
+        "payment_commitment": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "type": "number"
+                },
+                "currency": {
+                    "type": "string"
+                },
+                "escrow_tx_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "amount",
+                "currency",
+                "escrow_tx_id"
+            ]
+        },
+        "physical_requirements": {
+            "type": "object",
+            "properties": {
+                "lat": {
+                    "type": "number"
+                },
+                "long": {
+                    "type": "number"
+                },
+                "radius_meters": {
+                    "type": "number"
+                },
+                "min_verification_level": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "lat",
+                "long",
+                "radius_meters"
+            ]
+        },
+        "webhook_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Where to send the verification result."
+        }
+    },
+    "required": [
+        "request_id",
+        "origin_rail",
+        "payment_commitment",
+        "physical_requirements",
+        "webhook_url"
+    ]
+}
