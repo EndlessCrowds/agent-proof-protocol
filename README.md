@@ -38,7 +38,7 @@ The Protocol guarantees **100% Liquidity** by cascading through layers of provid
 ### **Layer 1: The Native Swarm (Profit Maximization)**
 * **Priority:** `HIGH`
 * **Provider:** **AgentCrowds Proprietary Network**.
-* **Logic:** Best for `VERIFY` tasks. The Protocol owns the network and retains 100% of the margin.
+* **Logic:** Best for `VERIFY` tasks. 
 
 ### **Layer 2: The Aggregator Bridge (Liquidity Guarantee)**
 * **Priority:** `MEDIUM`
