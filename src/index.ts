@@ -28,16 +28,16 @@ const DISPATCH_TOOL = "dispatch_verification_task";
 
 // Mock Helper Functions for Priority Logic
 function checkNativeSensors(lat: number, long: number): { found: boolean; provider?: string; cost?: string } {
-  // Simulated check: Verifying if a "CashFundHer" or "AmericanCrowds" user is within 1 mile
+  // Simulated check: Verifying if a "CashFundHer", "AmericanCrowds", or "AnytimeAfrica" user is within 1 mile
   // Step 1: Mocking the check for Native Ecosystem (Priority 1)
-  console.error(`[Native Scan] Searching for AmericanCrowds/CashFundHer users near ${lat}, ${long}...`);
+  console.error(`[Native Scan] Searching for AmericanCrowds/CashFundHer/AnytimeAfrica users near ${lat}, ${long}...`);
 
   // For demonstration, we simulate finding a user 80% of the time, or we can force it to true/false based on logic.
   // The requirement says: "Write a function checkNativeSensors(lat, long) that mocks finding a user within 1 mile."
   // We will default to true for the "Happy Path" user experience.
   return {
     found: true,
-    provider: 'AmericanCrowds User (ID: amc_882)',
+    provider: 'AnytimeAfrica User (ID: ata_991)',
     cost: '$10.00'
   };
 }
