@@ -6,8 +6,9 @@
 | **Genesis Date** | February 1, 2026 |
 | **Architect** | Roger Kwasi Senam Mensah |
 | **Status** | v2.1 (Universal Aggregator) |
-| **License** | MIT Open Source |
-| **Documentation** | [suspicious link removed] |
+| **Legal Entity** | Endless Crowds LLC |
+| **License** | MIT Open Source (Protocol Layer) |
+| **Documentation** | AgentCrowds.com |
 
 ## ⚡️ The Mission: The TCP/IP of Labor
 As the economy transitions from the "Information Age" to the "Agentic Era," a critical infrastructure gap has emerged. Autonomous AI agents can think and plan, but they cannot effectively touch, verify, or move atoms because the physical labor market is fragmented into incompatible silos (TaskRabbit, Uber, Field Nation, etc.).
