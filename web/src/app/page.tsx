@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -196,6 +196,7 @@ export default function Home() {
               <p className="text-blue-200 text-sm">Part of the Endless Crowds Network</p>
             </div>
             <div className="flex gap-8">
+              <Link href="/blog" className="text-blue-100 hover:text-white transition-colors text-sm font-medium">Protocol Blog</Link>
               <a href="https://americancrowds.com" className="text-blue-100 hover:text-white transition-colors text-sm font-medium">AmericanCrowds.com</a>
               <a href="https://rogermensah.com" className="text-blue-100 hover:text-white transition-colors text-sm font-medium">RogerMensah.com</a>
             </div>
