@@ -8,7 +8,7 @@
 | **Architect** | Roger Kwasi Senam Mensah |
 | **Legal Entity** | Endless Crowds LLC |
 | **License** | MIT Open Source (Protocol Layer) |
-| **Documentation** | [suspicious link removed] |
+| **Documentation** | AgentCrowds.com |
 
 ## 📜 The Mission: Inverting Labor
 The digital economy is undergoing a structural inversion from Human-to-Machine (H2M) to Agent-to-Human (A2H). As Artificial Intelligence gains autonomy, it requires a standardized, trustless, and programmable interface to access human labor as a primitive resource.
