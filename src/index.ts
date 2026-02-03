@@ -3,6 +3,12 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
 
+import * as Verify from "./primitives/verify.js";
+import * as Fix from "./primitives/fix.js";
+import * as Maintain from "./primitives/maintain.js";
+import * as Move from "./primitives/move.js";
+import * as Think from "./primitives/think.js";
+
 // Genesis Log - Stealth Mode
 console.log('Agent Proof Protocol (APP) v2.1 [Universal Aggregator] Initialized.');
 console.log('Genesis Timestamp: Feb 1, 2026. Architect: Roger Kwasi Senam Mensah.');
@@ -10,7 +16,13 @@ console.log('Genesis Timestamp: Feb 1, 2026. Architect: Roger Kwasi Senam Mensah
 const server = new Server({ name: "Agent-Proof-Gateway", version: "2.1.0" }, { capabilities: { tools: {} } });
 
 // The 5 Labor Primitives
-const PRIMITIVES = ["VERIFY", "FIX", "MAINTAIN", "MOVE", "THINK"] as const;
+const PRIMITIVES = [
+  Verify.PRIMITIVE_NAME,
+  Fix.PRIMITIVE_NAME,
+  Maintain.PRIMITIVE_NAME,
+  Move.PRIMITIVE_NAME,
+  Think.PRIMITIVE_NAME
+] as const;
 
 server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
@@ -44,30 +56,22 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   // FAIL-SAFE ROUTING LOGIC v2.1 (Aggregator Mode)
   let provider = "Unknown";
   let network_layer = "Layer 3 (Public Surge)";
-  let estimated_cost = args.constraints?.budget || "Market Rate";
+  const estimated_cost = args.constraints?.budget || "Market Rate";
 
-  // ROUTING RULE 1: Native Swarm (High Margin / Internal)
-  // We keep 'VERIFY' tasks internal to the AgentCrowds Network
-  if (primitive === "VERIFY") {
-    provider = "AgentCrowds Native Swarm (Tier 1 Node)";
+  if (primitive === Verify.PRIMITIVE_NAME) {
+    provider = Verify.PROVIDER;
     network_layer = "Layer 1 (Proprietary)";
-  }
-  // ROUTING RULE 2: Aggregator Bridge (Partner APIs)
-  // We route skilled/logistics tasks to external partners
-  else if (primitive === "FIX") {
-    provider = "Partner API (TaskRabbit/Angi Aggregation)";
+  } else if (primitive === Fix.PRIMITIVE_NAME) {
+    provider = Fix.PROVIDER;
     network_layer = "Layer 2 (Partner Bridge)";
-  }
-  else if (primitive === "MOVE") {
-    provider = "Partner API (Uber Direct/DoorDash)";
+  } else if (primitive === Move.PRIMITIVE_NAME) {
+    provider = Move.PROVIDER;
     network_layer = "Layer 2 (Partner Bridge)";
-  }
-  else if (primitive === "MAINTAIN") {
-    provider = "Partner API (Field Nation/WorkMarket)";
+  } else if (primitive === Maintain.PRIMITIVE_NAME) {
+    provider = Maintain.PROVIDER;
     network_layer = "Layer 2 (Partner Bridge)";
-  }
-  else if (primitive === "THINK") {
-    provider = "Partner API (Scale AI/MTurk)";
+  } else if (primitive === Think.PRIMITIVE_NAME) {
+    provider = Think.PROVIDER;
     network_layer = "Layer 2 (Partner Bridge)";
   }
 
