@@ -135,7 +135,6 @@ The APP v2.1 routing algorithm is designed to maximize human welfare. When a req
 
 **Priority 1: Native Swarm (The APP Network)**
 - **Target:** Individual humans registered directly via the protocol's peer-to-peer discovery layer.
-- **Economics:** 100% take rate to the human. Minimal protocol fee.
 - **Latency:** Immediate direct P2P negotiation.
 
 **Priority 2: Aggregator Bridge**
