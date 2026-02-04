@@ -5,7 +5,7 @@
 - **Author:** Roger Kwasi Senam Mensah  
 - **Date:** February 1, 2026  
 - **License:** MIT Open Source  
-- **Repository:** GitHub (Source of Truth)  
+- **Repository:** https://github.com/EndlessCrowds/agent-proof-protocol 
 
 ## Abstract
 As Artificial Intelligence transitions from passive Large Language Models (LLMs) to autonomous Large Action Models (LAMs), the industry faces a critical adoption ceiling: The Physical Wall. While software agents are rapidly driving the marginal cost of digital cognition to zero, they remain critically hamstrung by the "Last Mile" problem—capable of authorizing payments but incapable of verifying reality. The current labor landscape is a "Tower of Babel," a fragmented ecosystem of incompatible marketplaces that prevents autonomous systems from efficiently sourcing human execution.
