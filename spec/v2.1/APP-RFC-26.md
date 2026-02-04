@@ -152,13 +152,15 @@ To satisfy `proof_requirements.rtt_check: true`, the physical layer must conform
 *   **Attestation:** Device signs the raw RTT data inside the TEE (Trusted Execution Environment/Secure Enclave). Raw GPS data is rejected.
 
 ## 6. The Settlement Layer: Multi-Rail Routing
-APP v2.1 introduces "Context-Adaptive Settlement."
+The legacy financial system is fragmented. APP v2.1 introduces "Context-Adaptive Settlement," automatically selecting the optimal payment rail based on the agent's constraints.
 
-**TradFi (Card Rails):** Visa TAP & Mastercard Agent Pay. We integrate with card network APIs to issue ephemeral Virtual Account Numbers (VANs) for high-trust B2B transactions (e.g., $500 repairs).
+### 6.1 Traditional Finance (TradFi) Rails
+* **Visa TAP & Mastercard Agent Pay:** For high-trust, B2B transactions, APP integrates directly with card network APIs to issue ephemeral Virtual Account Numbers (VANs). This allows agents to pay for services (e.g., a $500 plumbing repair) using standard credit infrastructure.
+* **Google AP2:** For consumer-grade interactions (Android ecosystem), APP utilizes tokenized credentials for seamless tap-to-pay emulation.
 
-**Fiat Bridge (Payman.ai):** For "Unbanked Agent" scenarios, we leverage Payman.ai to handle KYC and direct fiat payouts to workers (USD/EUR) without the Agent needing a bank account.
-
-**Crypto Native:** x402 (Lightning) for micro-streaming.
+### 6.2 AI-Native & Hybrid Rails
+* **Payman.ai:** For fiat-to-human payouts, APP leverages Payman.ai to handle the "KYC Firewall." This allows pure AI agents to pay unbanked workers in local fiat currency (USD, EUR) without a bank account.
+* **x402 (Lightning Network):** For streaming micro-transactions, APP defaults to the L402 protocol standards.
 
 | Code | Error Name | Meaning |
 | :--- | :--- | :--- |
