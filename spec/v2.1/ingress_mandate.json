@@ -91,11 +91,3 @@
         }
     }
 }
-    "required": [
-    "request_id",
-    "origin_rail",
-    "payment_commitment",
-    "physical_requirements",
-    "webhook_url"
-]
-}
