@@ -321,7 +321,7 @@ export default function Home() {
 
         <h4>5.2.2 The Worker: Proof of Humanity</h4>
         <p>
-          The worker must prove they are unique and human to prevent "Sybil Attacks." We advocate for integration with privacy-preserving identity providers that utilize Zero-Knowledge Proofs (ZKPs), allowing a worker to prove "I am a unique human with a rating > 4.5" without revealing their real name or home address to the AI agent.
+          The worker must prove they are unique and human to prevent "Sybil Attacks." We advocate for integration with privacy-preserving identity providers that utilize Zero-Knowledge Proofs (ZKPs), allowing a worker to prove "I am a unique human with a rating &gt; 4.5" without revealing their real name or home address to the AI agent.
         </p>
       </section>
 
@@ -402,8 +402,8 @@ export default function Home() {
         <h3>Step 2: The Translation (Middleware)</h3>
         <p>The APP Translation Engine receives the JSON.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Check 1:</strong> Is there a Native Swarm plumber nearby? -> Result: Negative.</li>
-          <li><strong>Check 2:</strong> Query Aggregator Bridge. -> Result: Positive (PROVIDER_ID: "Partner_V3").</li>
+          <li><strong>Check 1:</strong> Is there a Native Swarm plumber nearby? &rarr; Result: Negative.</li>
+          <li><strong>Check 2:</strong> Query Aggregator Bridge. &rarr; Result: Positive (PROVIDER_ID: "Partner_V3").</li>
           <li><strong>Action:</strong> Convert APP JSON to Partner Schema POST /v1/tasks.</li>
         </ul>
 
