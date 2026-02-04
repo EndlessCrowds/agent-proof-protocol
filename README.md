@@ -1,5 +1,5 @@
 # The Agent Proof Protocol (APP) v2.1
-**Subtitle:** The Universal Execution Standard for the AI Agent Economy. Unifying Global Financial Rails, Google AP2, and Cryptographic Trust to enable AI Agents to manage operations in the Physical World. 
+**Subtitle:** [The Universal Execution Standard for the AI Agent Economy. Unifying Global Financial Rails, Google AP2, and Cryptographic Trust to enable AI Agents to manage operations in the Physical World.](https://github.com/EndlessCrowds/agent-proof-protocol) 
 
 **Metadata:**  
 - **Author:** Roger Kwasi Senam Mensah  
