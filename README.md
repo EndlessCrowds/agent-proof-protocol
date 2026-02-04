@@ -194,11 +194,6 @@ The economic engine of APP v2.1 is designed to create a flywheel effect that acc
 ### 7.1 The Aggregator Advantage
 In standard marketplaces, liquidity is the constraint. APP v2.1 solves this via Universal Aggregation. By bridging all marketplaces, it offers the deepest pool of labor in the world. An AI Agent using APP has simultaneous access to the drivers of Uber, the couriers of DoorDash, and the freelancers of the Native Swarm.
 
-### 7.2 The Native Swarm Transition
-Initially, APP routes volume to legacy aggregators to guarantee fulfillment. However, the economic logic favors the Native Swarm applications built on top of the protocol.
-- **Fee Arbitrage:** Legacy platforms typically charge 20-30%. Native Swarm applications can operate with significantly lower protocol fees.
-- **Agent Incentives:** Agents are programmed to minimize cost. They will preferentially route jobs to Native Swarm workers to save margin.
-- **Worker Incentives:** Workers will migrate to the Native Swarm to capture a higher percentage of the value of their labor.
 
 ## 8. Implementation Guide: The "First Principles" Workflow
 To illustrate the protocol in action, consider a full lifecycle transaction: "The Autonomous Property Manager."
