@@ -3,7 +3,7 @@ import { Search, Github } from 'lucide-react';
 
 export default function Header() {
     return (
-        <header className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 flex items-center justify-between px-6">
+        <header className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 flex items-center justify-between pl-14 pr-6 lg:px-6">
             <div className="flex items-center gap-4">
                 <Link href="/" className="text-slate-900 font-semibold text-lg tracking-tight hover:text-blue-600 transition-colors">
                     The Universal Translation Gateway
