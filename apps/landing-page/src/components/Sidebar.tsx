@@ -9,30 +9,32 @@ const NAV_ITEMS = [
         category: "Overview",
         items: [
             { label: "Abstract", href: "#abstract" },
-            { label: "Interoperability Thesis", href: "#interoperability" },
+            { label: "1. Introduction", href: "#introduction" },
+            { label: "2. Problem Statement", href: "#problem" },
         ]
     },
     {
-        category: "Core Mechanics",
+        category: "Core Protocol",
         items: [
-            { label: "Translation Engine", href: "#translation-engine" },
-            { label: "Protocol Workflow", href: "#workflow" },
-            { label: "Labor Primitives (Schema)", href: "#primitives" },
+            { label: "3. Economic Thesis", href: "#economic-thesis" },
+            { label: "4. Architecture", href: "#architecture" },
         ]
     },
     {
-        category: "Routing & Settlement",
+        category: "Infrastructure",
         items: [
-            { label: "Liquidity Assurance", href: "#liquidity" },
-            { label: "Trust & Verification", href: "#verification" },
-            { label: "Payment (x402)", href: "#settlement" },
+            { label: "5. Trust & DePIN", href: "#verification" },
+            { label: "6. Settlement", href: "#settlement" },
+            { label: "7. Economic Model", href: "#economic-model" },
         ]
     },
     {
         category: "Reference",
         items: [
-            { label: "JSON Standard", href: "#json-standard" },
-            { label: "Governance", href: "#governance" },
+            { label: "8. Implementation", href: "#implementation" },
+            { label: "9. Conclusion", href: "#conclusion" },
+            { label: "Appendix A: Adapters", href: "#appendix-a" },
+            { label: "Appendix B: API Docs", href: "#appendix-b" },
         ]
     }
 ];
@@ -96,11 +98,12 @@ export default function Sidebar() {
 
                     <div className="pt-6 border-t border-slate-100 mt-6 pb-24 lg:pb-0">
                         <Link
-                            href="/#governance"
+                            href="https://github.com/agent-proof-protocol"
+                            target="_blank"
                             onClick={closeMenu}
                             className="flex items-center gap-2 text-xs text-slate-500 hover:text-slate-900"
                         >
-                            <span>PROTOCOL SPECIFICATIONS</span>
+                            <span>SOURCE REPOSITORY</span>
                         </Link>
                     </div>
                 </nav>
