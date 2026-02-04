@@ -5,7 +5,7 @@
 **Author:** R. Mensah
 
 ## 1. Abstract Data Models
-The protocol is strictly typed. All interactions must conform to the following JSON schemas.
+The Universal Translation Gateway for Agentic Commerce. Bridging Visa TAP, Mastercard Agent Pay, Google AP2, Payman.ai, and Web3.
 
 ### 1.1 The Atom (Base Object)
 The fundamental unit of the protocol is the `TaskAtom`.
@@ -151,17 +151,14 @@ To satisfy `proof_requirements.rtt_check: true`, the physical layer must conform
 *   **Calculation:** Device calculates RTT = $(t4 - t1) - (t3 - t2)$.
 *   **Attestation:** Device signs the raw RTT data inside the TEE (Trusted Execution Environment/Secure Enclave). Raw GPS data is rejected.
 
-## 5. Settlement Headers (x402)
-Standard HTTP headers for the payment negotiation.
+## 6. The Settlement Layer: Multi-Rail Routing
+APP v2.1 introduces "Context-Adaptive Settlement."
 
-**Request (Agent -> Protocol):**
-`Authorization: L402 <token_macaroon>:<preimage>`
+**TradFi (Card Rails):** Visa TAP & Mastercard Agent Pay. We integrate with card network APIs to issue ephemeral Virtual Account Numbers (VANs) for high-trust B2B transactions (e.g., $500 repairs).
 
-**Response (Protocol -> Agent - If Unpaid):**
-`402 Payment Required`
-`WWW-Authenticate: L402 macaroon="...", invoice="lnbc1..."`
+**Fiat Bridge (Payman.ai):** For "Unbanked Agent" scenarios, we leverage Payman.ai to handle KYC and direct fiat payouts to workers (USD/EUR) without the Agent needing a bank account.
 
-## 6. Error Codes
+**Crypto Native:** x402 (Lightning) for micro-streaming.
 
 | Code | Error Name | Meaning |
 | :--- | :--- | :--- |

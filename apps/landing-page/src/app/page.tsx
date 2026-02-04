@@ -7,7 +7,7 @@ export default function Home() {
           Agent Proof Protocol (APP) v2.1
         </h1>
         <p className="text-xl text-slate-600 font-light">
-          The Universal Execution Layer for Agentic Commerce
+          Bridging the gap between AI Agents and the Real Economy. Now supporting Mastercard, Visa, and Payman.ai.
         </p>
         <div className="mt-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700 italic">
           "Visa authorizes the spend. Google defines the intent. We verify the reality."

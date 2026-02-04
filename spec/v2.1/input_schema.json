@@ -48,11 +48,11 @@
             "type": "string",
             "enum": [
                 "L402_LIGHTNING",
-                "ON_CHAIN_EVM",
                 "VISA_TAP",
                 "MASTERCARD_AGENT",
                 "PAYMAN_AI",
-                "GOOGLE_AP2"
+                "GOOGLE_AP2",
+                "ON_CHAIN_EVM"
             ]
         }
     },

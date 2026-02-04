@@ -83,52 +83,42 @@ An infrastructure protocol cannot fail. APP guarantees 100% Liquidity via a "Wat
 APP v2.1 comes "Battery Included" with 40+ pre-built adapters for the world's largest execution networks.
 
 ### PRIMITIVE: MOVE (Logistics & Atoms)
-| Adapter | Region | Utility |
-| :--- | :--- | :--- |
-| `@app/adapter-move-uber` | Global | Uber Direct |
-| `@app/adapter-move-doordash` | North America | Drive API |
-| `@app/adapter-move-stuart` | Europe/UK | DPD Group |
-| `@app/adapter-move-grab` | SE Asia | GrabExpress |
-| `@app/adapter-move-lalamove` | Asia/LatAm | On-Demand |
-| `@app/adapter-move-rappi` | LatAm | Store OS |
-| `@app/adapter-move-borzo` | India/Mexico | Courier |
-| `@app/adapter-move-roadie` | US | Bulky/Freight |
-| `@app/adapter-move-gokada` | Nigeria | Lagos Geo-Logistics |
-| `@app/adapter-move-maxng` | Nigeria | EV Logistics |
+*   **`@app/adapter-move-uber`** (Global - Uber Direct)
+*   **`@app/adapter-move-doordash`** (North America - Drive API)
+*   **`@app/adapter-move-stuart`** (Europe/UK - DPD Group)
+*   **`@app/adapter-move-grab`** (SE Asia - GrabExpress)
+*   **`@app/adapter-move-lalamove`** (Asia/LatAm)
+*   **`@app/adapter-move-rappi`** (LatAm - Store OS)
+*   **`@app/adapter-move-borzo`** (India/Mexico)
+*   **`@app/adapter-move-roadie`** (US - Bulky/Freight)
+*   **`@app/adapter-move-gokada`** (Nigeria - Lagos Geo-Logistics)
+*   **`@app/adapter-move-maxng`** (Nigeria - EV Logistics)
 
 ### PRIMITIVE: FIX (Consumer & Skilled Labor)
-| Adapter | Region | Utility |
-| :--- | :--- | :--- |
-| `@app/adapter-fix-taskrabbit` | Global | IKEA Partner API |
-| `@app/adapter-fix-urbancompany` | India/UAE | Managed Pro Services |
-| `@app/adapter-fix-thumbtack` | North America | Lead Gen API |
-| `@app/adapter-fix-airtasker` | Australia/UK | GraphQL Spot Tasks |
-| `@app/adapter-fix-sweepsouth` | Africa | Home Services |
-| `@app/adapter-fix-roamler` | Europe | Retail Audits |
+*   **`@app/adapter-fix-taskrabbit`** (Global - IKEA Partner API)
+*   **`@app/adapter-fix-urbancompany`** (India/UAE - Managed Pro Services)
+*   **`@app/adapter-fix-thumbtack`** (North America - Lead Gen API)
+*   **`@app/adapter-fix-airtasker`** (Australia/UK - GraphQL Spot Tasks)
+*   **`@app/adapter-fix-sweepsouth`** (Africa - Home Services)
+*   **`@app/adapter-fix-roamler`** (Europe - Retail Audits)
 
 ### PRIMITIVE: MAINTAIN (Enterprise Infrastructure)
-| Adapter | Region | Utility |
-| :--- | :--- | :--- |
-| `@app/adapter-maintain-fieldnation` | US | IT/Cabling Work Orders |
-| `@app/adapter-maintain-workmarket` | Global | ADP Compliance Cloud |
-| `@app/adapter-maintain-servicechannel` | Global | Facility Mgmt |
+*   **`@app/adapter-maintain-fieldnation`** (US - IT/Cabling Work Orders)
+*   **`@app/adapter-maintain-workmarket`** (Global - ADP Compliance Cloud)
+*   **`@app/adapter-maintain-servicechannel`** (Global - Facility Mgmt)
 
 ### PRIMITIVE: THINK (Cognitive & RLHF)
-| Adapter | Type | Utility |
-| :--- | :--- | :--- |
-| `@app/adapter-think-scale` | RLHF | Labeling & Annotations |
-| `@app/adapter-think-mturk` | Consensus | Micro-Tasks |
-| `@app/adapter-think-toloka` | High Vol | Python SDK |
+*   **`@app/adapter-think-scale`** (RLHF & Labeling)
+*   **`@app/adapter-think-mturk`** (Consensus Tasks)
+*   **`@app/adapter-think-toloka`** (High Volume Python SDK)
 
 ### SETTLEMENT RAILS (Fiat & Crypto)
-| Rail | Type | Utility |
-| :--- | :--- | :--- |
-| `@app/rail-payman` | AI Banking | AI-Native Banking |
-| `@app/rail-stripe` | Fiat | Global Splits & Payouts |
-| `@app/rail-wise` | Forex | Cross-Border |
-| `@app/rail-skyfire` | Crypto | USDC Agent Spend |
-| `@app/rail-yellowcard` | Stablecoin | African Rails |
-| `@app/rail-strike` | Bitcoin | Lightning Network |
+*   **`@app/rail-payman`** (AI-Native Banking)
+*   **`@app/rail-stripe`** (Global Splits & Payouts)
+*   **`@app/rail-wise`** (Cross-Border Forex)
+*   **`@app/rail-skyfire`** (USDC Agent Spend)
+*   **`@app/rail-yellowcard`** (African Stablecoin Rails)
+*   **`@app/rail-strike`** (Bitcoin Lightning)
 
 ## 6. Trust & Verification: The DePIN Stack
 In an era of Deepfakes and AI voice synthesis, "Digital Trust" is dead. We replace "Trust" with "Proof." We rely on the laws of physics to verify reality.

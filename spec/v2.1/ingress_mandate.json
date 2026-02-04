@@ -83,26 +83,19 @@
                 }
             },
             "budget_caps": {
-                "type": "object",
-                "properties": {
-                    "crypto_daily_limit_sats": {
-                        "type": "integer"
-                    },
-                    "fiat_daily_limit_cents": {
-                        "type": "integer",
-                        "description": "Hard cap for Visa/Mastercard/Payman transactions (in cents)"
-                    }
+                "fiat_daily_limit_cents": {
+                    "type": "integer",
+                    "description": "Mastercard/Visa/Payman Hard Cap"
                 }
             }
         }
     }
 }
-},
-"required": [
-"request_id",
-"origin_rail",
-"payment_commitment",
-"physical_requirements",
-"webhook_url"
+    "required": [
+    "request_id",
+    "origin_rail",
+    "payment_commitment",
+    "physical_requirements",
+    "webhook_url"
 ]
 }
