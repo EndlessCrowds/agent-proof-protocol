@@ -65,11 +65,44 @@
             "description": "Where to send the verification result."
         }
     },
-    "required": [
-        "request_id",
-        "origin_rail",
-        "payment_commitment",
-        "physical_requirements",
-        "webhook_url"
-    ]
+    "permissions": {
+        "type": "object",
+        "properties": {
+            "can_sign_contracts": {
+                "type": "boolean"
+            },
+            "allowed_settlement_rails": {
+                "type": "array",
+                "items": {
+                    "enum": [
+                        "L402_LIGHTNING",
+                        "VISA_TAP",
+                        "MASTERCARD_AGENT",
+                        "PAYMAN_AI"
+                    ]
+                }
+            },
+            "budget_caps": {
+                "type": "object",
+                "properties": {
+                    "crypto_daily_limit_sats": {
+                        "type": "integer"
+                    },
+                    "fiat_daily_limit_cents": {
+                        "type": "integer",
+                        "description": "Hard cap for Visa/Mastercard/Payman transactions (in cents)"
+                    }
+                }
+            }
+        }
+    }
+}
+},
+"required": [
+"request_id",
+"origin_rail",
+"payment_commitment",
+"physical_requirements",
+"webhook_url"
+]
 }

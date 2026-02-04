@@ -43,6 +43,17 @@
                     "type": "boolean"
                 }
             }
+        },
+        "rail": {
+            "type": "string",
+            "enum": [
+                "L402_LIGHTNING",
+                "ON_CHAIN_EVM",
+                "VISA_TAP",
+                "MASTERCARD_AGENT",
+                "PAYMAN_AI",
+                "GOOGLE_AP2"
+            ]
         }
     },
     "required": [

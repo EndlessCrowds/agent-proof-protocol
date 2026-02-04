@@ -125,14 +125,16 @@ An AI agent is not a person; it is a smart contract with a bank account. We util
 #### 5.2.2 The Worker: Proof of Humanity
 The worker must prove they are unique and human to prevent "Sybil Attacks." We advocate for integration with privacy-preserving identity providers that utilize Zero-Knowledge Proofs (ZKPs), allowing a worker to prove "I am a unique human with a rating > 4.5" without revealing their real name or home address to the AI agent.
 
-## 6. The Settlement Layer: x402 and Streaming Cash
-The legacy financial system (SWIFT, ACH, Credit Cards) is too slow for the Agentic Era. An AI agent making 1,000 micro-decisions a minute cannot wait for a credit card authorization for each one.
-### 6.1 x402: The Missing HTTP Code
-The original HTTP protocol reserved status code 402 Payment Required. It was never implemented—until now. APP v2.1 utilizes the x402 (L402) protocol standard.
-Mechanism: When an agent requests a service via APP, the API responds with 402 Payment Required and a Lightning Network invoice (a cryptographic challenge).
-Atomic Swap: The agent pays the invoice instantly (in milliseconds). The receipt (the "Preimage") acts as the authentication token to access the service.
-### 6.2 Streaming Payments (The "Salary Hose")
-For time-based tasks (e.g., a "THINK" task requiring 1 hour of review), APP v2.1 supports Payment Streaming. Every second the worker is active (verified by periodic "Proof of Location"), funds flow directly to their wallet. This "Money-over-IP" architecture transforms labor from a debt-based contract (work now, get paid later) into a real-time asset swap.
+## 6. The Settlement Layer: Multi-Rail Routing
+The legacy financial system is fragmented. APP v2.1 introduces "Context-Adaptive Settlement," automatically selecting the optimal payment rail based on the agent's constraints, the worker's location, and the transaction size.
+
+### 6.1 Traditional Finance (TradFi) Rails
+* **Visa TAP & Mastercard Agent Pay:** For high-trust, B2B transactions, APP integrates directly with card network APIs to issue ephemeral Virtual Account Numbers (VANs). This allows agents to pay for services (e.g., a $500 plumbing repair) using standard credit infrastructure, ensuring instant merchant acceptance.
+* **Google AP2:** For consumer-grade interactions (Android ecosystem), APP utilizes tokenized credentials for seamless tap-to-pay emulation.
+
+### 6.2 AI-Native & Hybrid Rails
+* **Payman.ai:** For fiat-to-human payouts, APP leverages Payman.ai to handle the "KYC Firewall." This allows pure AI agents to pay unbanked or gig-economy workers in local fiat currency (USD, EUR, NGN) without holding a bank account themselves.
+* **x402 (Lightning Network):** For streaming micro-transactions (e.g., paying 0.0001 cents per millisecond of video analysis), APP defaults to the L402 protocol standards.
 
 ## 7. Economic Model: The Liquidity Efficiency
 The economic engine of APP v2.1 is designed to create a flywheel effect that accelerates the adoption of both AI agents and human participation through pure market efficiency.

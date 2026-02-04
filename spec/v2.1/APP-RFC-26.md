@@ -67,7 +67,14 @@ interface TaskPayload {
   bounty: {
     amount: number;
     asset: "SAT" | "USDC" | "USD";
-    rail: "L402" | "VISA_TAP" | "ON_CHAIN";
+    // UPDATED: Now supports all major Agentic Financial Rails
+    rail: "L402_LIGHTNING" | "VISA_TAP" | "MASTERCARD_AGENT" | "PAYMAN_AI" | "GOOGLE_AP2" | "ON_CHAIN_EVM";
+    
+    // Optional: Context for virtual card issuance
+    settlement_metadata?: {
+        merchant_category_code?: string; // For Visa/MC restrictions
+        payman_workflow_id?: string;     // For AI-to-Fiat bridge
+    };
   };
 }
 ```

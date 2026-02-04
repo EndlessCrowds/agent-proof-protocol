@@ -6,7 +6,7 @@ export default function Header() {
         <header className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-slate-200 z-50 flex items-center justify-between px-6">
             <div className="flex items-center gap-4">
                 <Link href="/" className="text-slate-900 font-semibold text-lg tracking-tight hover:text-blue-600 transition-colors">
-                    Agent Proof Protocol
+                    The Universal Translation Gateway
                 </Link>
                 <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
                     v2.1

@@ -17,33 +17,73 @@
             "format": "date-time"
         },
         "verifier_signature": {
-            "type": "string",
-            "description": "ECDSA signature from the Human Sensor"
-        },
-        "proof_metadata": {
-            "type": "object",
-            "properties": {
-                "wifi_rtt_distance": {
-                    "type": "number"
-                },
-                "device_integrity_score": {
-                    "type": "number"
-                },
-                "liveness_check_passed": {
-                    "type": "boolean"
-                }
-            },
-            "required": [
-                "wifi_rtt_distance",
-                "device_integrity_score",
-                "liveness_check_passed"
-            ]
+            "type": "string"
         },
         "status": {
-            "type": "string",
             "enum": [
                 "verified",
                 "rejected"
+            ]
+        },
+        "settlement_details": {
+            "oneOf": [
+                {
+                    "description": "Crypto Native Settlement",
+                    "properties": {
+                        "rail": {
+                            "const": "L402_LIGHTNING"
+                        },
+                        "preimage": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "rail",
+                        "preimage"
+                    ]
+                },
+                {
+                    "description": "Virtual Card Settlement (Visa/Mastercard)",
+                    "properties": {
+                        "rail": {
+                            "enum": [
+                                "VISA_TAP",
+                                "MASTERCARD_AGENT"
+                            ]
+                        },
+                        "card_token": {
+                            "type": "string",
+                            "description": "The ephemeral tokenized card reference (PCI-DSS Safe)"
+                        },
+                        "expiration_ts": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "rail",
+                        "card_token",
+                        "expiration_ts"
+                    ]
+                },
+                {
+                    "description": "Agent-to-Fiat Bridge (Payman)",
+                    "properties": {
+                        "rail": {
+                            "const": "PAYMAN_AI"
+                        },
+                        "workflow_id": {
+                            "type": "string"
+                        },
+                        "payment_link": {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    },
+                    "required": [
+                        "rail",
+                        "workflow_id"
+                    ]
+                }
             ]
         }
     },

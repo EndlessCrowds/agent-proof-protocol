@@ -1,7 +1,7 @@
 # Agent Proof Protocol (APP) v2.1
 ## The Universal Execution Layer for Agentic Commerce
 
-> "Visa authorizes the spend. Google defines the intent. We verify the reality."
+> "The Universal Translation Gateway for Agentic Commerce. Bridging Visa TAP, Mastercard Agent Pay, Google AP2, Payman.ai, and Web3."
 
 ## 1. Abstract: The TCP/IP of Labor
 The global economy is currently undergoing a phase transition of historical magnitude: the shift from the Information Age to the Agentic Era. In this new epoch, software no longer merely retrieves information; it autonomously executes economic actions.
