@@ -78,25 +78,77 @@ An infrastructure protocol cannot fail. APP guarantees 100% Liquidity via a "Wat
 *   **Architecture:** Public Bounty Broadcast.
 *   **Logic:** If no provider accepts the task at the reserve price, the Protocol enters "Surge Mode." It broadcasts the task to the open web with dynamic pricing, autonomously raising the bounty second-by-second until a market-clearing price is discovered by a human actor.
 
-## 5. Trust & Verification: The DePIN Stack
+
+## 5. 🔌 Global Adapter Library (v2.1)
+APP v2.1 comes "Battery Included" with 40+ pre-built adapters for the world's largest execution networks.
+
+### PRIMITIVE: MOVE (Logistics & Atoms)
+| Adapter | Region | Utility |
+| :--- | :--- | :--- |
+| `@app/adapter-move-uber` | Global | Uber Direct |
+| `@app/adapter-move-doordash` | North America | Drive API |
+| `@app/adapter-move-stuart` | Europe/UK | DPD Group |
+| `@app/adapter-move-grab` | SE Asia | GrabExpress |
+| `@app/adapter-move-lalamove` | Asia/LatAm | On-Demand |
+| `@app/adapter-move-rappi` | LatAm | Store OS |
+| `@app/adapter-move-borzo` | India/Mexico | Courier |
+| `@app/adapter-move-roadie` | US | Bulky/Freight |
+| `@app/adapter-move-gokada` | Nigeria | Lagos Geo-Logistics |
+| `@app/adapter-move-maxng` | Nigeria | EV Logistics |
+
+### PRIMITIVE: FIX (Consumer & Skilled Labor)
+| Adapter | Region | Utility |
+| :--- | :--- | :--- |
+| `@app/adapter-fix-taskrabbit` | Global | IKEA Partner API |
+| `@app/adapter-fix-urbancompany` | India/UAE | Managed Pro Services |
+| `@app/adapter-fix-thumbtack` | North America | Lead Gen API |
+| `@app/adapter-fix-airtasker` | Australia/UK | GraphQL Spot Tasks |
+| `@app/adapter-fix-sweepsouth` | Africa | Home Services |
+| `@app/adapter-fix-roamler` | Europe | Retail Audits |
+
+### PRIMITIVE: MAINTAIN (Enterprise Infrastructure)
+| Adapter | Region | Utility |
+| :--- | :--- | :--- |
+| `@app/adapter-maintain-fieldnation` | US | IT/Cabling Work Orders |
+| `@app/adapter-maintain-workmarket` | Global | ADP Compliance Cloud |
+| `@app/adapter-maintain-servicechannel` | Global | Facility Mgmt |
+
+### PRIMITIVE: THINK (Cognitive & RLHF)
+| Adapter | Type | Utility |
+| :--- | :--- | :--- |
+| `@app/adapter-think-scale` | RLHF | Labeling & Annotations |
+| `@app/adapter-think-mturk` | Consensus | Micro-Tasks |
+| `@app/adapter-think-toloka` | High Vol | Python SDK |
+
+### SETTLEMENT RAILS (Fiat & Crypto)
+| Rail | Type | Utility |
+| :--- | :--- | :--- |
+| `@app/rail-payman` | AI Banking | AI-Native Banking |
+| `@app/rail-stripe` | Fiat | Global Splits & Payouts |
+| `@app/rail-wise` | Forex | Cross-Border |
+| `@app/rail-skyfire` | Crypto | USDC Agent Spend |
+| `@app/rail-yellowcard` | Stablecoin | African Rails |
+| `@app/rail-strike` | Bitcoin | Lightning Network |
+
+## 6. Trust & Verification: The DePIN Stack
 In an era of Deepfakes and AI voice synthesis, "Digital Trust" is dead. We replace "Trust" with "Proof." We rely on the laws of physics to verify reality.
 
-### 5.1 Proof of Location (IEEE 802.11mc)
+### 6.1 Proof of Location (IEEE 802.11mc)
 GPS is passive and easily spoofed. APP v2.1 mandates Wi-Fi RTT (Round Trip Time).
 *   **The Physics:** The protocol measures the Time of Flight of radio signals between the worker's device and nearby Wi-Fi Access Points (Anchors). Since the speed of light is constant ($c$), this measurement cannot be faked via software.
 *   **Witness Chain:** The measurement is cryptographically signed by the device's Trusted Execution Environment (TEE), creating an unforgeable "Proof of Physics" that confirms the worker is physically present at the task location.
 
-### 5.2 Identity: ERC-8004
+### 6.2 Identity: ERC-8004
 *   **Agents:** Must present a valid ERC-8004 identity to interact with the protocol. This creates an on-chain reputation score for AI Agents, preventing spam.
 *   **Workers:** Utilize Zero-Knowledge Proofs (ZKPs) to prove "Humanity" and "Reputation" without revealing Personally Identifiable Information (PII) to the machine.
 
-## 6. Settlement: The x402 Standard
+## 7. Settlement: The x402 Standard
 The legacy financial system (Net-30, Chargebacks) is incompatible with autonomous agents that operate at the speed of code. APP v2.1 implements HTTP 402 (Payment Required).
 *   **Mechanism:** When an Agent requests a task, the API responds with a 402 Payment Required header containing a Lightning Network invoice or Stablecoin challenge.
 *   **Streaming:** For time-based tasks (THINK / MAINTAIN), funds stream second-by-second. This transforms labor from a debt-based contract ("I'll pay you in 2 weeks") to a real-time asset swap.
 *   **Finality:** Settlement is atomic. The `Settlement_Token` is only issued when the cryptographic `Proof_of_Physics` is verified.
 
-## 7. Implementation Guide: The JSON Standard
+## 8. Implementation Guide: The JSON Standard
 
 ### The Universal Request
 This schema is the "Lingua Franca" of the Agentic Economy. It is the single data structure that bridges Google's intent, Visa's money, and Web3's execution.
@@ -119,7 +171,7 @@ This schema is the "Lingua Franca" of the Agentic Economy. It is the single data
 }
 ```
 
-## 8. Governance & Attribution
+## 9. Governance & Attribution
 The Agent Proof Protocol is a public good.
 It is the open standard for the Agentic Century. We invite the world's engineers, cryptographers, and economists to collaborate on building the infrastructure that ensures AI remains a partner to humanity, not a replacement.
 

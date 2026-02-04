@@ -161,6 +161,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ecosystem */}
+      <section id="ecosystem" className="mb-16 scroll-mt-24">
+        <div className="mb-8">
+          <h2 className="mb-2">Connected to 95% of Global GDP</h2>
+          <p className="text-xl text-slate-600 font-light">One Protocol. 40+ Execution Networks. Zero Friction.</p>
+        </div>
+
+        <p className="mb-8">
+          The Agent Proof Protocol acts as the universal switchboard for the physical world. We aggregate the world's most liquid execution networks into a single, standardized API. Whether you need a server fixed in Dallas, a package moved in Lagos, or a shelf audited in Berlin, APP v2.1 routes your intent to the optimal local provider instantly.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Column 1: Logistics */}
+          <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <h4 className="mt-0 text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Logistics (MOVE)</h4>
+            <ul className="list-none pl-0 space-y-2 text-sm text-slate-600">
+              <li className="flex items-center gap-2 font-medium">Uber Direct</li>
+              <li className="flex items-center gap-2 font-medium">DoorDash</li>
+              <li className="flex items-center gap-2 font-medium">Grab</li>
+              <li className="flex items-center gap-2 font-medium">Rappi</li>
+              <li className="flex items-center gap-2 font-medium">Gokada</li>
+            </ul>
+          </div>
+
+          {/* Column 2: Labor */}
+          <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <h4 className="mt-0 text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Labor (FIX/MAINTAIN)</h4>
+            <ul className="list-none pl-0 space-y-2 text-sm text-slate-600">
+              <li className="flex items-center gap-2 font-medium">TaskRabbit</li>
+              <li className="flex items-center gap-2 font-medium">Field Nation</li>
+              <li className="flex items-center gap-2 font-medium">Urban Company</li>
+              <li className="flex items-center gap-2 font-medium">WorkMarket</li>
+            </ul>
+          </div>
+
+          {/* Column 3: Settlement */}
+          <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <h4 className="mt-0 text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Settlement (PAY)</h4>
+            <ul className="list-none pl-0 space-y-2 text-sm text-slate-600">
+              <li className="flex items-center gap-2 font-medium">Stripe</li>
+              <li className="flex items-center gap-2 font-medium">Payman</li>
+              <li className="flex items-center gap-2 font-medium">Visa</li>
+              <li className="flex items-center gap-2 font-medium">Skyfire</li>
+              <li className="flex items-center gap-2 font-medium">Yellow Card</li>
+            </ul>
+          </div>
+
+          {/* Column 4: Verification */}
+          <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+            <h4 className="mt-0 text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Verification (TRUTH)</h4>
+            <ul className="list-none pl-0 space-y-2 text-sm text-slate-600">
+              <li className="flex items-center gap-2 font-medium">Witness Chain</li>
+              <li className="flex items-center gap-2 font-medium">World ID</li>
+              <li className="flex items-center gap-2 font-medium">Wi-Fi RTT</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Liquidity Assurance */}
       <section id="liquidity" className="mb-16 scroll-mt-24">
         <h2>4. The Liquidity Assurance Protocol (Fail-Safe Routing)</h2>
