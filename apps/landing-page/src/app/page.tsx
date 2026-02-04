@@ -203,6 +203,7 @@ export default function Home() {
               <li className="flex items-center gap-2 font-medium">Stripe</li>
               <li className="flex items-center gap-2 font-medium">Payman</li>
               <li className="flex items-center gap-2 font-medium">Visa</li>
+              <li className="flex items-center gap-2 font-medium">Mastercard Agent Pay</li>
               <li className="flex items-center gap-2 font-medium">Skyfire</li>
               <li className="flex items-center gap-2 font-medium">Yellow Card</li>
             </ul>
@@ -290,14 +291,20 @@ export default function Home() {
 
       {/* Settlement */}
       <section id="settlement" className="mb-16 scroll-mt-24">
-        <h2>6. Settlement: The x402 Standard</h2>
+        <h2>6. Settlement: The Multi-Rail Standard</h2>
         <p>
-          The legacy financial system (Net-30, Chargebacks) is incompatible with autonomous agents that operate at the speed of code. APP v2.1 implements HTTP 402 (Payment Required).
+          APP v2.1 introduces "Context-Adaptive Settlement," automatically selecting the optimal payment rail.
         </p>
+
+        <h3 className="text-xl font-bold mt-6 mb-2">6.1 Traditional Finance (TradFi)</h3>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Mechanism:</strong> When an Agent requests a task, the API responds with a 402 Payment Required header containing a Lightning Network invoice or Stablecoin challenge.</li>
-          <li><strong>Streaming:</strong> For time-based tasks (THINK / MAINTAIN), funds stream second-by-second. This transforms labor from a debt-based contract to a real-time asset swap.</li>
-          <li><strong>Finality:</strong> Settlement is atomic. The Settlement_Token is only issued when the cryptographic Proof_of_Physics is verified.</li>
+          <li><strong>Visa TAP & Mastercard Agent Pay:</strong> We integrate with card network APIs to issue ephemeral Virtual Account Numbers (VANs) for high-trust B2B transactions.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2">6.2 AI-Native & Hybrid</h3>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Payman.ai:</strong> For fiat-to-human payouts, we leverage Payman.ai to handle KYC and direct fiat transfers (USD/EUR) without the Agent needing a bank account.</li>
+          <li><strong>x402 (Lightning):</strong> For streaming micro-transactions, we default to the L402 protocol.</li>
         </ul>
       </section>
 
