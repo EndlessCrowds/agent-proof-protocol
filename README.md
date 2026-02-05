@@ -113,7 +113,7 @@ To reduce the complexity of the physical world into machine-manageable units, AP
 #### 4.2.2 Primitive II: FIX ("The Hands - Consumer")
 - **Definition:** Residential manual labor and unskilled assembly.
 - **Use Case:** An Airbnb management agent detects a "Smart Lock Offline" error. It broadcasts a FIX primitive.
-- **Safeguard:** The protocol ensures the payout targets a verified human wallet, preventing "bot-hiring-bot" loops.
+- **Safeguard:** The protocol ensures the payout targets a verified human wallet
 
 #### 4.2.3 Primitive III: MAINTAIN ("The Hands - Enterprise")
 - **Definition:** Certified, skilled technical labor requiring licensure.
