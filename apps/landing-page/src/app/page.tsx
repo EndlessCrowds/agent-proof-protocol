@@ -1,20 +1,22 @@
+import React from 'react';
+
 export default function Home() {
   return (
-    <article className="prose prose-slate max-w-[80ch]">
+    <article className="prose prose-slate max-w-[80ch] mx-auto py-12 px-6">
       {/* Header Section */}
       <div className="mb-12 pb-6 border-b border-slate-200">
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
           Agent Proof Protocol (APP) v2.1
         </h1>
-        <p className="text-xl text-slate-600 font-light">
-          The Universal Execution Layer for the Agentic Economy
+        <p className="text-xl text-slate-600 font-light mb-6">
+          The Universal Execution Standard for the AI Agent Economy. Unifying Global Financial Rails, Google AP2, Logistics & Labor Marketplace APIs, and Cryptographic Trust to enable AI Agents to manage operations in the Physical World.
         </p>
-        <div className="mt-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700">
+        <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div><span className="font-semibold">Author:</span> Roger Kwasi Senam Mensah</div>
             <div><span className="font-semibold">Date:</span> February 1, 2026</div>
             <div><span className="font-semibold">License:</span> MIT Open Source</div>
-            <div><span className="font-semibold">Repository:</span> GitHub (Source of Truth)</div>
+            <div><span className="font-semibold">Repository:</span> <a href="https://github.com/EndlessCrowds/agent-proof-protocol" className="text-blue-600 hover:underline">GitHub</a></div>
           </div>
         </div>
       </div>
@@ -29,7 +31,7 @@ export default function Home() {
           The Agent Proof Protocol (APP) v2.1 establishes the Universal Execution Layer required to bridge this divide. Functioning as the "TCP/IP of Labor," it aggregates disparate liquidity pools into a single, machine-readable API. The protocol defines five semantic "Labor Primitives" (VERIFY, FIX, MAINTAIN, MOVE, THINK) and secures execution via a novel DePIN stack, utilizing Wi-Fi RTT (IEEE 802.11mc) for cryptographic Proof of Location and ERC-8004 for trustless Agent Identity.
         </p>
         <p>
-          By standardizing "Ground Truth," APP v2.1 creates a symbiotic economic bridge where the explosive growth of AI Agents acts as a direct stimulus for the human workforce. Recognizing that ubiquitous humanoid robotics are decades away from cost-parity, the protocol treats the existing human population as a scalable, programmable "biological hardware" layer. This infrastructure is not merely a utility; it is the structural necessity for the Agentic Economy to take hold, ensuring that as Agents scale, they become the largest employers of human labor in history.
+          By standardizing "Ground Truth," APP v2.1 creates a symbiotic economic bridge where the explosive growth of AI Agents acts as a direct stimulus for the human workforce. Recognizing that ubiquitous humanoid robotics are decades away from cost-parity, the protocol treats the existing human population as a scalable, programmable "Biological Hardware" layer. Crucially, this layer is accessed not just through proprietary apps, but via Embedded SDKs integrated into the global ecosystem of mobile applications. This infrastructure is the structural necessity for the Agentic Economy to take hold, ensuring that as Agents scale, they become the largest employers of human labor in history.
         </p>
       </section>
 
@@ -158,7 +160,7 @@ export default function Home() {
                 <td className="p-3 font-mono">intent</td>
                 <td className="p-3">String</td>
                 <td className="p-3">The high-level goal of the agent.</td>
-                <td className="p-3">Enum: RESOLVE_OUTAGE, VERIFY_STATE, TRANSPORT_ASSET, GENERATE_DATA</td>
+                <td className="p-3">Enum: RESOLVE_OUTAGE, VERIFY_STATE, etc.</td>
               </tr>
               <tr>
                 <td className="p-3 font-mono">primitive</td>
@@ -177,6 +179,12 @@ export default function Home() {
                 <td className="p-3">Boolean</td>
                 <td className="p-3">Strict flag for biological necessity.</td>
                 <td className="p-3">Must be true for APP routing.</td>
+              </tr>
+               <tr>
+                <td className="p-3 font-mono">privacy_mode</td>
+                <td className="p-3">Enum</td>
+                <td className="p-3">(New) Protocol for data handling.</td>
+                <td className="p-3">PUBLIC (Default), ANONYMIZED (Blur), EPHEMERAL (No store).</td>
               </tr>
               <tr>
                 <td className="p-3 font-mono">location_proof</td>
@@ -211,6 +219,7 @@ export default function Home() {
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Syntactic Validation:</strong> Is the JSON well-formed?</li>
           <li><strong>Semantic Validation:</strong> Does the sub_type match the primitive?</li>
+           <li><strong>Privacy Check:</strong> Does the requested task violate local privacy laws (e.g., GDPR in Europe)?</li>
           <li><strong>Liquidity Check:</strong> Is there a human provider within the geofence capable of this task?</li>
           <li><strong>Solvency Check:</strong> Does the agent have sufficient funds locked in the payment channel?</li>
         </ul>
@@ -262,20 +271,20 @@ export default function Home() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Priority 1: Native Swarm (The APP Network)</strong>
-            <br />Target: Individual humans registered directly via the protocol's peer-to-peer discovery layer.
-            <br />Economics: 100% take rate to the human. Minimal protocol fee.
-            <br />Latency: Immediate direct P2P negotiation.
+            <strong>Priority 1: The Federated Native Swarm (SDK Mesh)</strong>
+            <br />Target: A distributed mesh of human sensors accessed via the APP Embedded SDK.
+            <br />Composition: This layer is not a single app. It is a federation of "Host Applications" (Neo-banks, Wallets, Play-to-Earn Games, Telcos) that have integrated the AgentProof_Verify_SDK to monetize their user base.
+            <br />Latency: Zero-latency execution. The protocol routes tasks directly to active users inside third-party apps who are available for micro-verifications.
           </li>
           <li>
             <strong>Priority 2: Aggregator Bridge</strong>
             <br />Target: Legacy platforms (Uber, TaskRabbit, etc.).
             <br />Trigger: If no Native Swarm worker is available within the max_response_time window.
-            <br />Economics: Agent pays the legacy platform's fee structure. The APP protocol acts as the "API Client" on behalf of the agent.
+            <br />Economics: Agent pays the legacy platform's fee structure plus a Protocol Bridge Fee. The APP protocol acts as the "API Client" on behalf of the agent, handling the complexity of the external transaction.
           </li>
         </ul>
         <p>
-          This "waterfall" logic ensures high reliability (by falling back to legacy pools) while incentivizing the growth of the native, zero-fee human network.
+          This "waterfall" logic ensures high reliability (by falling back to legacy pools) while incentivizing the growth of the native human network.
         </p>
       </section>
 
@@ -305,11 +314,11 @@ export default function Home() {
 
         <h4>5.1.2 The Witness Chain</h4>
         <p>We implement a "Witness Chain" model. The Wi-Fi Access Points act as "Witnesses."</p>
-        <ol className="list-decimal pl-6 space-y-2">
+        <ul className="list-decimal pl-6 space-y-2">
           <li>The Worker's device initiates an RTT ranging request.</li>
           <li>Nearby Access Points respond.</li>
           <li><strong>Secure Enclave Signing:</strong> The RTT measurement is signed inside the device's Trusted Execution Environment (TEE). This hardware-level signature proves the OS hasn't tampered with the sensor data.</li>
-        </ol>
+        </ul>
 
         <h3>5.2 Identity: ERC-8004 and Proof of Humanity</h3>
         <p>To facilitate trust between a silicon agent and a biological worker, APP v2.1 adopts a dual-identity stack.</p>
@@ -322,6 +331,34 @@ export default function Home() {
         <h4>5.2.2 The Worker: Proof of Humanity</h4>
         <p>
           The worker must prove they are unique and human to prevent "Sybil Attacks." We advocate for integration with privacy-preserving identity providers that utilize Zero-Knowledge Proofs (ZKPs), allowing a worker to prove "I am a unique human with a rating &gt; 4.5" without revealing their real name or home address to the AI agent.
+        </p>
+        
+        <h3>5.3 The Privacy Firewall: GDPR & Biometric Safety</h3>
+        <p>
+        To ensure the APP network does not become a tool for surveillance, the protocol implements a mandatory "Privacy Filter" at the SDK level. This is critical for Remittance Verification (e.g., verifying a delivery of cement for AnytimeAfrica construction projects) where the goal is to verify the asset, not the person.
+        </p>
+
+        <h4>5.3.1 On-Device Anonymization (Edge Compute)</h4>
+        <p>
+        If privacy_mode is set to ANONYMIZED (default for public verification), the APP SDK processes the image locally on the worker's device before upload.
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Mechanism:</strong> An on-device computer vision model detects faces, license plates, and personal documents.</li>
+            <li><strong>Redaction:</strong> It applies a Gaussian Blur or solid block redaction to these regions.</li>
+            <li><strong>Result:</strong> The Agent receives a photo of the "Ground Truth" (e.g., the cement bags, the building facade) but receives zero PII (Personally Identifiable Information) of bystanders or workers.</li>
+        </ul>
+
+        <h4>5.3.2 Ephemeral Verification ("The Flash Protocol")</h4>
+        <p>For high-sensitivity tasks (e.g., "Is the line at the clinic long?"), the Agent does not need the photo; it needs the answer.</p>
+        <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Process:</strong> The worker takes the photo. The local APP AI analyzes it and generates a boolean result (e.g., CROWD_DENSITY: HIGH).</li>
+            <li><strong>Hashing:</strong> The photo is cryptographically hashed to prove it existed at that time/location.</li>
+            <li><strong>Deletion:</strong> The raw image is deleted from the device and never uploaded to the cloud. Only the Hash + Metadata + Answer is transmitted.</li>
+        </ul>
+
+        <h4>5.3.3 The Consent Handshake</h4>
+        <p>
+        For VERIFY primitives occurring on private property (e.g., inside a store), the protocol mandates a "Digital Handshake." The worker must present a QR code to the property owner/manager, who scans it to grant temporary, cryptographic "Photography Consent" for that specific session.
         </p>
       </section>
 
@@ -364,14 +401,14 @@ export default function Home() {
           In standard marketplaces, liquidity is the constraint. APP v2.1 solves this via Universal Aggregation. By bridging all marketplaces, it offers the deepest pool of labor in the world. An AI Agent using APP has simultaneous access to the drivers of Uber, the couriers of DoorDash, and the freelancers of the Native Swarm.
         </p>
 
-        <h3>7.2 The Native Swarm Transition</h3>
+        <h3>7.2 The Embedded Supply Thesis (Decoupling Supply)</h3>
         <p>
-          Initially, APP routes volume to legacy aggregators to guarantee fulfillment. However, the economic logic favors the Native Swarm applications built on top of the protocol.
+          Historically, labor supply was locked inside "Walled Gardens" (e.g., you must download the Uber Driver app to work for Uber). APP v2.1 introduces the Embedded Supply model.
         </p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Fee Arbitrage:</strong> Legacy platforms typically charge 20-30%. Native Swarm applications can operate with significantly lower protocol fees.</li>
-          <li><strong>Agent Incentives:</strong> Agents are programmed to minimize cost. They will preferentially route jobs to Native Swarm workers to save margin.</li>
-          <li><strong>Worker Incentives:</strong> Workers will migrate to the Native Swarm to capture a higher percentage of the value of their labor.</li>
+          <li><strong>Mechanism:</strong> By providing a white-label Verification SDK, the protocol allows any digital application to become a labor supplier.</li>
+          <li><strong>Host Apps:</strong> Neo-Banks can allow users to "Top Up" accounts via verification tasks; Games can incentivize players to scan real-world objects for in-game currency; Telcos can offset bills via network diagnostics.</li>
+          <li><strong>Result:</strong> This creates a "Permissionless Swarm" where millions of dormant users are instantly activated as human sensors, without the friction of downloading a new gig economy app.</li>
         </ul>
       </section>
 
@@ -390,6 +427,7 @@ export default function Home() {
   "primitive": "FIX",
   "sub_type": "PLUMBING",
   "human_verification": true,
+  "privacy_mode": "ANONYMIZED",
   "payload": {
     "issue": "PIPE_BURST",
     "location": "34.0522,-118.2437",
@@ -416,13 +454,13 @@ export default function Home() {
         <h3>Step 5: The Verification (DePIN)</h3>
         <p>The Agent requires proof before releasing final payment.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>The Plumber triggers a VERIFY handshake.</li>
-          <li>The phone performs a Wi-Fi RTT scan, proving the device is physically inside the apartment (matching the IoT sensor's location).</li>
-          <li>The Plumber takes a photo of the fixed pipe. The photo is hashed and signed.</li>
+            <li>The Plumber triggers a VERIFY handshake.</li>
+            <li>The phone performs a Wi-Fi RTT scan, proving the device is physically inside the apartment.</li>
+            <li>The Plumber takes a photo of the fixed pipe. The APP SDK automatically blurs any family photos in the background (Privacy Firewall).</li>
         </ul>
 
         <h3>Step 6: The Settlement (Value Transfer)</h3>
-        <p>The Agent validates the RTT proof and the photo. The Agent instantly streams the payment via L402. Transaction Finalized.</p>
+        <p>The Agent validates the RTT proof and the sanitized photo. The Agent instantly streams the payment via L402. Transaction Finalized.</p>
       </section>
 
       {/* 9. Conclusion */}
@@ -449,6 +487,11 @@ export default function Home() {
         <h2>Appendix A: Global Adapter Library (Reference Implementation)</h2>
         <p>
           To ensure immediate global liquidity, the APP v2.1 Reference Implementation (AgentCrowds) includes pre-built adapters for the following execution networks. This allows Developers to utilize the Protocol without building custom integrations for each provider.
+        </p>
+
+        <h3>A.0 PRIMITIVE: EMBEDDED SWARM (The SDK Layer)</h3>
+        <p>
+        <strong>AgentProof SDK (React Native / iOS / Android):</strong> A drop-in library that enables any third-party application to function as a "Native Swarm Node." It handles Camera access, Wi-Fi RTT Logic, Liveness Detection, and Wallet Settlement, allowing Host Apps to monetize their user base via the protocol.
         </p>
 
         <h3>A.1 PRIMITIVE: MOVE (Logistics & Delivery)</h3>
@@ -514,6 +557,7 @@ export default function Home() {
         <h3>B.1 The VERIFY Primitive - JSON Detail</h3>
         <pre><code className="language-json">{`{
   "primitive": "VERIFY",
+  "privacy_mode": "EPHEMERAL",
   "requirements": {
     "target_coordinates": {"lat": 40.7128, "lng": -74.0060},
     "tolerance_meters": 5,
