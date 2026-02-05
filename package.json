@@ -1,19 +1,17 @@
 {
   "name": "agent-proof-protocol",
   "version": "2.1.0",
-  "description": "The Universal Execution Layer for Agentic Commerce. A standardized MCP server to hire human labor (Verify, Fix, Move, Maintain) via one API.",
+  "description": "The Universal Execution Standard for the AI Agent Economy. Bridges Google AP2, Visa TAP, and Human Labor via Embedded SDKs.",
   "main": "build/index.js",
   "license": "MIT",
-  "author": "Roger Kwasi Senam Mensah <Endless Crowds LLC>",
+  "author": "Roger Kwasi Senam Mensah",
   "keywords": [
-    "ai-labor",
-    "agentic-commerce",
-    "task-dispatch",
-    "uber-direct-api",
-    "taskrabbit-integration",
-    "field-nation",
-    "mcp-server",
-    "ground-truth"
+    "ai-agent",
+    "depin",
+    "embedded-sdk",
+    "labor-protocol",
+    "wifi-rtt",
+    "erc-8004"
   ],
   "scripts": {
     "build": "tsc",
