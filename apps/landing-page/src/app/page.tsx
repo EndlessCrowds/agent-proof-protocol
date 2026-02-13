@@ -1,585 +1,302 @@
 import React from 'react';
+import WhitepaperSections5to8 from '../components/WhitepaperSections5to8';
 
 export default function Home() {
   return (
-    <article className="prose prose-slate max-w-[80ch] mx-auto py-12 px-6">
-      {/* Header Section */}
+    <article className="prose prose-slate max-w-[65ch] mx-auto py-12 px-6">
+      {/* Metadata */}
+      <div className="metadata-bar mb-8 p-4 bg-slate-50 border border-slate-200 rounded-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+          <div><span className="text-slate-400">Author:</span> Roger Kwasi Senam Mensah</div>
+          <div><span className="text-slate-400">License:</span> MIT Open Source</div>
+          <div className="sm:col-span-2"><span className="text-slate-400">Repository:</span> <a href="https://github.com/EndlessCrowds/agent-proof-protocol" className="text-blue-600 hover:underline">github.com/EndlessCrowds/agent-proof-protocol</a></div>
+        </div>
+      </div>
+
+      {/* Title */}
       <div className="mb-12 pb-6 border-b border-slate-200">
         <h1 className="text-4xl font-bold tracking-tight text-slate-900 mb-4">
-          Agent Proof Protocol (APP) v2.1
+          The Agent Proof Protocol (APP) v2.4
         </h1>
-        <p className="text-xl text-slate-600 font-light mb-6">
-          The Universal Execution Standard for the AI Agent Economy. Unifying Global Financial Rails, Google AP2, Logistics & Labor Marketplace APIs, and Cryptographic Trust to enable AI Agents to manage operations in the Physical World.
-        </p>
-        <div className="p-4 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-700">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div><span className="font-semibold">Author:</span> Roger Kwasi Senam Mensah</div>
-            <div><span className="font-semibold">Date:</span> February 1, 2026</div>
-            <div><span className="font-semibold">License:</span> MIT Open Source</div>
-            <div><span className="font-semibold">Repository:</span> <a href="https://github.com/EndlessCrowds/agent-proof-protocol" className="text-blue-600 hover:underline">GitHub</a></div>
-          </div>
-        </div>
+        <h2 className="text-xl text-slate-500 font-light mb-0 border-none pb-0 mt-0">
+          The Universal Execution Standard for the AI Agent Economy. Unifying Global Financial Rails, MCP, WebMCP, Unix Pipelines, Logistics &amp; Labor Marketplace APIs, and Cryptographic Trust to enable AI Agents to manage operations in the Physical World.
+        </h2>
       </div>
 
       {/* Abstract */}
       <section id="abstract" className="mb-16 scroll-mt-24">
         <h2>Abstract</h2>
-        <p>
-          As Artificial Intelligence transitions from passive Large Language Models (LLMs) to autonomous Large Action Models (LAMs), the industry faces a critical adoption ceiling: The Physical Wall. While software agents are rapidly driving the marginal cost of digital cognition to zero, they remain critically hamstrung by the "Last Mile" problem—capable of authorizing payments but incapable of verifying reality. The current labor landscape is a "Tower of Babel," a fragmented ecosystem of incompatible marketplaces that prevents autonomous systems from efficiently sourcing human execution.
-        </p>
-        <p>
-          The Agent Proof Protocol (APP) v2.1 establishes the Universal Execution Layer required to bridge this divide. Functioning as the "TCP/IP of Labor," it aggregates disparate liquidity pools into a single, machine-readable API. The protocol defines five semantic "Labor Primitives" (VERIFY, FIX, MAINTAIN, MOVE, THINK) and secures execution via a novel DePIN stack, utilizing Wi-Fi RTT (IEEE 802.11mc) for cryptographic Proof of Location and ERC-8004 for trustless Agent Identity.
-        </p>
-        <p>
-          By standardizing "Ground Truth," APP v2.1 creates a symbiotic economic bridge where the explosive growth of AI Agents acts as a direct stimulus for the human workforce. Recognizing that ubiquitous humanoid robotics are decades away from cost-parity, the protocol treats the existing human population as a scalable, programmable "Biological Hardware" layer. Crucially, this layer is accessed not just through proprietary apps, but via Embedded SDKs integrated into the global ecosystem of mobile applications. This infrastructure is the structural necessity for the Agentic Economy to take hold, ensuring that as Agents scale, they become the largest employers of human labor in history.
-        </p>
+        <p>As Artificial Intelligence evolves from passive digital tools into autonomous economic actors, the role of human labor is undergoing a fundamental transformation. The next phase of the digital economy will not replace humans; it will re-platform them. While software agents can now process information at an infinite scale, they remain isolated from the physical world&mdash;incapable of opening a door, repairing a circuit, or verifying a delivery without human hands.</p>
+        <p>The current landscape is a &ldquo;Tower of Babel,&rdquo; a fragmented ecosystem of incompatible labor marketplaces and opaque commerce rails. This prevents autonomous systems from efficiently sourcing human execution. More critically, the diversity of Agent Runtimes&mdash;ranging from Cloud-hosted LLMs to Browser-based assistants and Local-First CLI agents&mdash;lacks a unified standard for physical interaction.</p>
+        <p>The Agent Proof Protocol (APP) v2.4 establishes the Universal Settlement Layer required to bridge this divide. It functions as a neutral middleware that wraps existing liquidity pools and commerce merchants in a military-grade verification layer. Crucially, v2.4 introduces the &ldquo;Tri-State Architecture,&rdquo; allowing Agents to interact with the physical world via their native environment: Model Context Protocol (MCP) for cloud systems, WebMCP for browsers, and Unix Standard Streams for local runtimes.</p>
+        <p>The protocol defines the PhysicalTask standard&mdash;a unified Python interface that aggregates disparate APIs into a single, audit-ready command.</p>
+        <p>By coupling &ldquo;Execution&rdquo; (via Partner Networks) with &ldquo;Verification&rdquo; (via APP&apos;s Wi-Fi RTT &amp; Bio-Liveness Proofs), APP creates a trust-minimized economic bridge. It mandates a &ldquo;Trust, Then Transact&rdquo; workflow, allowing AI Agents to buy goods, hire skilled professionals, and crowdsource human sensors with cryptographic certainty.</p>
+        <p>This infrastructure is the structural necessity for the Agentic Economy to take hold, ensuring that as Agents scale, they become the largest employers of human labor in history.</p>
       </section>
 
-      {/* 1. Introduction */}
-      <section id="introduction" className="mb-16 scroll-mt-24">
+      {/* Section 1 */}
+      <section id="section-1" className="mb-16 scroll-mt-24">
         <h2>1. Introduction: The Agentic Transition</h2>
 
-        <h3>1.1 From Information Retrieval to Action Execution</h3>
-        <p>
-          The trajectory of the digital economy over the past three decades has been defined by the optimization of information retrieval. The "Search Era," dominated by aggregators like Google, reduced the marginal cost of finding information to near zero. We are now witnessing the dawn of the "Agentic Era," a phase shift where the primary locus of value moves from retrieving information to acting upon it.
-        </p>
-        <p>
-          Generative AI has evolved rapidly from passive Large Language Models (LLMs) to active Large Action Models (LAMs). These autonomous agents are not merely chatbots; they are economic actors capable of planning, reasoning, and executing multi-step workflows. They possess objectives, manage budgets, and make purchasing decisions independent of direct human oversight. Projections indicate that by 2030, "Machine Customers"—autonomous software programs authorized to purchase goods and services—will account for upwards of 20% of all digital commerce revenue. This represents a fundamental restructuring of global demand, shifting from a human-centric consumption model to one driven significantly by algorithmic needs.
-        </p>
+        <h3 id="section-1-1">1.1 From Information Retrieval to Action Execution</h3>
+        <p>The trajectory of the digital economy has shifted from the optimization of information retrieval (Google) to the optimization of action execution (Agents). We are witnessing the dawn of the &ldquo;Agentic Era,&rdquo; where the primary locus of value moves from retrieving information to acting upon it.</p>
+        <p>By 2030, &ldquo;Machine Customers&rdquo;&mdash;autonomous software programs authorized to purchase goods and services&mdash;will account for upwards of 20% of all digital commerce revenue. This represents a fundamental restructuring of global demand, shifting from a human-centric consumption model to one driven significantly by algorithmic needs.</p>
 
-        <h3>1.2 The Adoption Ceiling: The Crisis of Ground Truth</h3>
-        <p>
-          The adoption of Agentic AI is currently throttled by a lack of "Ground Truth." An Agent can easily execute a transaction to rent an apartment, buy a vehicle, or restock a warehouse. However, without a physical presence, the Agent acts blindly. It cannot verify if the apartment exists, if the vehicle runs, or if the warehouse shelves are actually empty.
-        </p>
-        <p>
-          Current solutions—hiring expensive drone fleets or deploying capital-intensive humanoid robots—are economically unviable for 99% of Agent tasks. The "Agent Economy" cannot scale if every physical verification costs $500 in hardware deployment.
-        </p>
-        <p>
-          APP v2.1 solves this by democratizing access to the ultimate general-purpose sensor: The Human. By making human verification programmatically accessible via API, we provide Agents with the low-cost, high-fidelity "eyes and hands" required to operate confidently in the real world.
-        </p>
+        <h3 id="section-1-2">1.2 The Adoption Ceiling: The Runtime &amp; Trust Gap</h3>
+        <p>The adoption of Agentic AI is currently throttled by two distinct friction points: Lack of Ground Truth and Runtime Fragmentation.</p>
+        <p><strong>The Trust Gap:</strong> An Agent can hire 1,000 logistics drivers in milliseconds via direct API injection. However, without a physical verification layer (Wi-Fi RTT, Bio-Liveness), this creates a &ldquo;High-Frequency Fraud&rdquo; vector.</p>
+        <p><strong>The Runtime Gap:</strong> The agent ecosystem is bifurcating. While some agents operate in the cloud (using APIs), a significant portion of the developer community&mdash;driven by privacy and latency concerns&mdash;is moving toward &ldquo;Sovereign Agents&rdquo; running locally on consumer hardware. These local agents prefer composable, terminal-based tools over complex HTTP integrations.</p>
+        <p>The &ldquo;Agent Economy&rdquo; cannot scale if it forces local agents into cloud silos or subjects cloud agents to blind execution. APP v2.4 resolves this by standardizing the Intent, regardless of the Interface.</p>
 
-        <h3>1.3 The APP Mandate: A Bridge for the Workforce</h3>
-        <p>
-          The Agent Proof Protocol (APP) v2.1 is architected to prevent this exclusion. It is built upon a singular, immutable directive: Demand is Digital, Supply is Biological.
-        </p>
-        <p>
-          APP is not a platform; it is a protocol. Just as SMTP standardizes email transmission regardless of the mail client, and TCP/IP standardizes data transmission regardless of the hardware, APP standardizes labor requests regardless of the marketplace. It functions as a Universal Execution Layer, translating the intent of an AI agent into a cryptographically verified work order for a human being. By doing so, it ensures that the rise of autonomous agents acts as a massive stimulus package for the human workforce.
-        </p>
+        <h3 id="section-1-3">1.3 The APP Mandate: The Universal Settlement Standard</h3>
+        <p>APP is designed to solve this liability crisis. It is built upon a singular, immutable directive: <strong>Demand is Digital, Execution is Hybrid, Verification is Mandatory.</strong></p>
+        <p>APP is not a gig platform; it is a settlement protocol. Just as global payment networks standardize financial transmission regardless of the issuing bank, APP standardizes PhysicalTask execution regardless of the labor provider (Gig Worker or Merchant). It functions as a Universal Middleware, translating the intent of an AI agent into a cryptographically verified work order.</p>
       </section>
 
-      {/* 2. Problem Statement */}
-      <section id="problem" className="mb-16 scroll-mt-24">
-        <h2>2. Problem Statement: The Tower of Babel</h2>
+      {/* Section 2 */}
+      <section id="section-2" className="mb-16 scroll-mt-24">
+        <h2>2. Problem Statement: The Trust &amp; Fragmentation Gap</h2>
 
-        <h3>2.1 The Fragmentation of Liquidity</h3>
-        <p>
-          The current landscape of digital labor is characterized by extreme vertical specialization. Over the past decade, the "Gig Economy" has fractured into deep but isolated pools of liquidity—a phenomenon we term the "Tower of Babel" problem.
-        </p>
+        <h3 id="section-2-1">2.1 The Fragmentation of Liquidity (The Tower of Babel)</h3>
+        <p>The global labor and commerce market is fractured into deep, isolated silos.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Logistics Silos:</strong> A driver on the Uber platform cannot easily accept a package delivery job from FedEx or a food delivery request from DoorDash without switching contexts, apps, and identity systems.</li>
-          <li><strong>Skill Silos:</strong> A certified electrician on Field Nation is invisible to a homeowner looking for help on TaskRabbit.</li>
-          <li><strong>Identity Silos:</strong> A worker’s reputation is locked within specific platforms. A 5-star rating on Upwork does not translate to trust on Thumbtack.</li>
+          <li><strong>Logistics Silos:</strong> An Agent cannot easily route a package from a national carrier depot to a local on-demand courier.</li>
+          <li><strong>Skill Silos:</strong> A certified electrician on an enterprise workforce platform is invisible to a homeowner Agent looking on a consumer services app.</li>
+          <li><strong>Identity Silos:</strong> A worker&apos;s reputation is locked within specific walled gardens.</li>
         </ul>
-        <p>
-          For an AI agent, this fragmentation is catastrophic. To execute a complex, multi-modal task—such as "Drive to the server farm (Uber), diagnose the overheating rack (Field Nation), and courier the faulty drive to the depot (DoorDash)"—an agent would need to integrate with three distinct, incompatible APIs.
-        </p>
-        <p className="font-semibold mt-4">Technical Incompatibility Analysis</p>
-        <p>The friction is not merely administrative; it is deeply technical.</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Logistics (DaaS) APIs:</strong> Requires OAuth 2.0, uses specific fields like <code>dropoff_verification</code> with schemas for "signature" or "picture."</li>
-          <li><strong>Consumer Labor Marketplaces:</strong> Use a completely different authentication flow, often lacking public API access for machine agents.</li>
-          <li><strong>Enterprise Ticketing Systems:</strong> Tailored for enterprise, requiring <code>types_of_work</code> IDs and complex <code>site_revisit</code> logic.</li>
-        </ul>
-        <p>
-          An AI agent cannot natively "speak" all these dialects. The engineering overhead to maintain integrations with hundreds of fragmented marketplaces is prohibitive, leading agents to abandon physical execution entirely.
-        </p>
+        <p>For an AI agent, this fragmentation is catastrophic. To execute a complex task, an agent would need to maintain integrations with fifty distinct, incompatible APIs.</p>
 
-        <h3>2.2 The Trust Deficit in Machine-to-Machine Commerce</h3>
-        <p>Beyond API incompatibility, traditional trust mechanisms are failing in the face of autonomous commerce.</p>
+        <h3 id="section-2-2">2.2 The Trust Deficit (Blind Execution)</h3>
+        <p>Beyond API incompatibility, traditional marketplaces fail the &ldquo;Machine Customer&rdquo; test.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>The Payment Gap:</strong> Legacy payment rails are optimized for human reversibility (chargebacks). However, by layering Cryptographic Proof of Physics on top of Visa and Mastercard rails, APP v2.1 creates a new 'Irreversible Settlement' standard compatible with traditional banking.</li>
-          <li><strong>The Identity Gap:</strong> How does a human worker know that an AI agent will pay? Conversely, how does an AI agent know a human worker actually performed the task? In a purely digital environment, "verification" is often just a database entry, which can be spoofed. OAuth provides permission, but not identity or reputation.</li>
+          <li><strong>The Verification Gap:</strong> Legacy platforms rely on the worker clicking &ldquo;I&apos;m Done.&rdquo; For an AI Agent managing a million-dollar real estate portfolio, this self-reporting is a security vulnerability.</li>
+          <li><strong>The Settlement Gap:</strong> Money is typically released upon digital signal, not physical proof.</li>
         </ul>
 
-        <h3>2.3 The Solution: A Universal Translator</h3>
-        <p>
-          The industry requires a unified middleware—a translation layer that sits between the infinite demand of AI agents and the fragmented supply of human labor. This layer must:
-        </p>
+        <h3 id="section-2-3">2.3 The Solution: Trust-Wrapped Execution</h3>
+        <p>The industry requires a unified middleware&mdash;a &ldquo;Trust Wrapper&rdquo; that sits between the AI Agent and the fragmented supply chain.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Aggregate Supply:</strong> Treat every human worker as part of a single global resource pool.</li>
-          <li><strong>Standardize Intent:</strong> Convert complex machine goals into simple, semantic "Labor Primitives" (e.g., "MOVE," "FIX," "VERIFY").</li>
-          <li><strong>Cryptographically Verify:</strong> Replace "trust me" with "proof of work" using physical sensors and cryptographic signatures.</li>
+          <li><strong>Aggregate:</strong> Access mobility networks, skilled labor marketplaces, and The Human Grid through one API.</li>
+          <li><strong>Verify:</strong> Enforce &ldquo;Proof of Physics&rdquo; (Wi-Fi RTT, Geofencing, Computer Vision) before settlement.</li>
+          <li><strong>Settle:</strong> Release funds only when Execution matches Verification.</li>
         </ul>
       </section>
 
-      {/* 3. The Economic Thesis */}
-      <section id="economic-thesis" className="mb-16 scroll-mt-24">
-        <h2>3. The Economic Thesis (The "Stimulus" Argument)</h2>
-        <p>
-          The prevailing narrative suggests AI will displace human labor. APP v2.1 enforces the opposite reality: AI will become the primary purchaser of human labor.
-        </p>
+      {/* Section 3 */}
+      <section id="section-3" className="mb-16 scroll-mt-24">
+        <h2>3. The Economic Thesis: A Bifurcated Supply Chain</h2>
+        <p>APP recognizes that labor needs differ by geography and complexity. We employ a &ldquo;Two-Tier&rdquo; supply strategy.</p>
 
-        <h3>3.1 The Machine Customer Stimulus</h3>
-        <p>
-          As Agents proliferate, their demand for physical execution will outpace the capabilities of digital-only systems. An Agent managing a logistics chain needs thousands of "micro-verifications" daily. An Agent managing a real estate portfolio needs constant "micro-maintenance."
-        </p>
-        <p>
-          This protocol creates a mechanism for Universal Basic Employment (UBE). Instead of rendering humans obsolete, the "Zero-Marginal Cost" of Agent cognition creates a massive surplus of budget that is re-allocated to physical execution.
-        </p>
+        <h3 id="section-3-1">3.1 Tier 1: The Partner Network (&ldquo;The Pros&rdquo;)</h3>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Geography:</strong> Developed Markets (US, EU, UK).</li>
+          <li><strong>Source:</strong> Enterprise Workforce Platforms &amp; On-Demand Labor Marketplaces.</li>
+          <li><strong>Role:</strong> High-Skilled &amp; Certified Execution.</li>
+          <li><strong>Examples:</strong> HVAC repair, commercial landscaping, snow removal, server maintenance, licensed logistics, and facility inspections.</li>
+          <li><strong>The APP Value: The Audit.</strong> We provide the &ldquo;Digital Punch Card.&rdquo; We audit the professional to ensure the AI Agent gets exactly what it paid for, mitigating liability and fraud for high-value tasks.</li>
+        </ul>
+
+        <h3 id="section-3-2">3.2 Tier 2: The Human Grid (&ldquo;The People&rdquo;)</h3>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Geography:</strong> Emerging Markets &amp; Global Urban Centers.</li>
+          <li><strong>Source:</strong> Embedded Supply SDKs (Host Partners) &amp; The Reference Validator Network.</li>
+          <li><strong>Role:</strong> Verification, Micro-Logistics, and Infrastructure Sensing.</li>
+          <li><strong>The APP Value: Access &amp; Aggregation.</strong> We connect AI Agents to fragmented local delivery and sensor networks that currently lack standard APIs, creating a unified mesh of human sensors for lightweight tasks.</li>
+        </ul>
+
+        <h3 id="section-3-3">3.3 The Distribution Strategy: Embedded Supply Aggregation</h3>
+        <p>Establishing a new two-sided marketplace typically suffers from the &ldquo;Cold Start Problem&rdquo;&mdash;the inability to fulfill demand due to a lack of liquidity. APP circumvents this by architectural design, utilizing an Embedded SDK model to aggregate existing supply rather than recruiting individual workers.</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li><strong>The Robot Fallacy:</strong> We do not need to wait for affordable androids. We have billions of humans seeking economic opportunity now.</li>
-          <li><strong>The Bridge:</strong> APP turns the human population into a plug-and-play workforce for Agents. By allowing an Agent to hire a human for $5 to verify a location, we allow the Agent economy to scale rapidly today, without waiting for hardware innovation.</li>
+          <li><strong>The Host Partner Model:</strong> The Protocol Ecosystem integrates with high-frequency &ldquo;Host Applications&rdquo; (e.g., Fintech Wallets, Telco Super-Apps, Hyper-Casual Games, and Ride-Sharing platforms) that already possess high Daily Active Users (DAU) in target geolocations.</li>
+          <li><strong>The Integration:</strong> These partners integrate the AgentProof SDK, effectively transforming their user base into latent &ldquo;Grid Nodes.&rdquo;</li>
+          <li><strong>The Incentive:</strong> The Protocol creates a programmatic revenue-sharing stream for Host Partners. By monetizing their dormant user attention through physical verification tasks, Host Apps generate a new perpetual revenue line, incentivizing them to maintain the SDK and prioritize APP notifications.</li>
+          <li><strong>Strategic Advantage:</strong> This transforms the protocol from a consumer app competing for attention into a Monetization Infrastructure for existing platforms, allowing APP to instantly access millions of potential sensors in high-density urban centers.</li>
         </ul>
       </section>
 
-      {/* 4. Technical Architecture */}
-      <section id="architecture" className="mb-16 scroll-mt-24">
-        <h2>4. Technical Architecture: The Universal Translator</h2>
-        <p>
-          The core innovation of APP v2.1 is the Translation Engine. This middleware serves as the interoperability bridge, parsing high-level machine intent into executable, platform-specific API calls. It acts as the "Universal Translator" for the Tower of Babel.
-        </p>
+      {/* Section 4 */}
+      <section id="section-4" className="mb-16 scroll-mt-24">
+        <h2>4. Technical Architecture: The PhysicalTask Standard</h2>
+        <p>The core innovation of APP is the PhysicalTask interface. This is the &ldquo;HTTP&rdquo; of the physical world&mdash;a boring, reliable standard that every Agent uses to interact with reality.</p>
 
-        <h3>4.1 The Input Schema (JSON)</h3>
-        <p>
-          The protocol enforces a strict, strongly-typed JSON schema for all inbound requests. This schema is the "Lingua Franca" of the Agentic economy. Every request must be essentially a self-contained smart contract, defining the what, where, and how much of the task.
-        </p>
+        <h3 id="section-4-1">4.1 The Input Schema (JSON)</h3>
+        <p>The protocol enforces a strict, strongly-typed JSON schema for all inbound requests. This schema is the &ldquo;Lingua Franca&rdquo; of the Agentic economy.</p>
 
-        <div className="my-6 overflow-hidden rounded-lg border border-slate-200">
+        <div className="my-6 overflow-x-auto rounded-lg border border-slate-200">
           <table className="min-w-full text-sm">
-            <caption className="p-4 font-semibold text-left border-b border-slate-200 bg-slate-50">Table 1: The APP v2.1 Request Structure</caption>
+            <caption className="p-4 font-semibold text-left border-b border-slate-200 bg-slate-50">Table 1: The APP Request Structure</caption>
             <thead>
               <tr className="bg-slate-50">
-                <th className="p-3 text-left font-semibold border-b">Field</th>
-                <th className="p-3 text-left font-semibold border-b">Type</th>
-                <th className="p-3 text-left font-semibold border-b">Description</th>
-                <th className="p-3 text-left font-semibold border-b">Constraint</th>
+                <th className="p-3 text-left font-semibold border-b-2">Field</th>
+                <th className="p-3 text-left font-semibold border-b-2">Type</th>
+                <th className="p-3 text-left font-semibold border-b-2">Description</th>
+                <th className="p-3 text-left font-semibold border-b-2">Constraint</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              <tr>
-                <td className="p-3 font-mono">intent</td>
-                <td className="p-3">String</td>
-                <td className="p-3">The high-level goal of the agent.</td>
-                <td className="p-3">Enum: RESOLVE_OUTAGE, VERIFY_STATE, etc.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">primitive</td>
-                <td className="p-3">Enum</td>
-                <td className="p-3">The specific Labor Primitive required.</td>
-                <td className="p-3">Must be one of: VERIFY, FIX, MAINTAIN, MOVE, THINK</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">sub_type</td>
-                <td className="p-3">String</td>
-                <td className="p-3">Domain-specific skill tag.</td>
-                <td className="p-3">e.g., HVAC_REPAIR, DATA_LABELING</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">human_verification</td>
-                <td className="p-3">Boolean</td>
-                <td className="p-3">Strict flag for biological necessity.</td>
-                <td className="p-3">Must be true for APP routing.</td>
-              </tr>
-               <tr>
-                <td className="p-3 font-mono">privacy_mode</td>
-                <td className="p-3">Enum</td>
-                <td className="p-3">(New) Protocol for data handling.</td>
-                <td className="p-3">PUBLIC (Default), ANONYMIZED (Blur), EPHEMERAL (No store).</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">location_proof</td>
-                <td className="p-3">Object</td>
-                <td className="p-3">Requirements for DePIN verification.</td>
-                <td className="p-3">e.g., {"{ \"method\": \"WIFI_RTT\", \"accuracy\": \"1m\" }"}</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">payload</td>
-                <td className="p-3">Object</td>
-                <td className="p-3">Task-specific parameters.</td>
-                <td className="p-3">Dynamic based on primitive.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">payment_rail</td>
-                <td className="p-3">String</td>
-                <td className="p-3">Settlement method.</td>
-                <td className="p-3">Default: L402_LIGHTNING</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-mono">max_budget</td>
-                <td className="p-3">Integer</td>
-                <td className="p-3">Payment cap in Satoshis or Stablecoin.</td>
-                <td className="p-3">Positive Integer.</td>
-              </tr>
+              <tr><td className="p-3 font-mono text-xs">intent</td><td className="p-3">String</td><td className="p-3">The high-level goal of the agent.</td><td className="p-3">Enum: RESOLVE_OUTAGE, VERIFY_STATE, etc.</td></tr>
+              <tr><td className="p-3 font-mono text-xs">primitive</td><td className="p-3">Enum</td><td className="p-3">The specific Labor Primitive required.</td><td className="p-3">Must be one of: VERIFY, FIX, MAINTAIN, MOVE, THINK</td></tr>
+              <tr><td className="p-3 font-mono text-xs">sub_type</td><td className="p-3">String</td><td className="p-3">Domain-specific skill tag.</td><td className="p-3">e.g., HVAC_REPAIR, DATA_LABELING</td></tr>
+              <tr><td className="p-3 font-mono text-xs">dependencies</td><td className="p-3">Array</td><td className="p-3">List of parent Task Hashes that must complete first.</td><td className="p-3">Optional. Array of Strings (SHA-256 Hashes).</td></tr>
+              <tr><td className="p-3 font-mono text-xs">human_verification</td><td className="p-3">Boolean</td><td className="p-3">Strict flag for biological necessity.</td><td className="p-3">Must be true for APP routing.</td></tr>
+              <tr><td className="p-3 font-mono text-xs">privacy_mode</td><td className="p-3">Enum</td><td className="p-3">Protocol for data handling.</td><td className="p-3">PUBLIC (Default), ANONYMIZED (Blur), EPHEMERAL (No store).</td></tr>
+              <tr><td className="p-3 font-mono text-xs">location_proof</td><td className="p-3">Object</td><td className="p-3">Requirements for DePIN verification.</td><td className="p-3">{`e.g., {"method": "WIFI_RTT", "accuracy": "1m"}`}</td></tr>
+              <tr><td className="p-3 font-mono text-xs">payment_token</td><td className="p-3">String</td><td className="p-3">Secured Token for Settlement.</td><td className="p-3">Mastercard Agent Pay / Visa Token.</td></tr>
+              <tr><td className="p-3 font-mono text-xs">payload</td><td className="p-3">Object</td><td className="p-3">Task-specific parameters.</td><td className="p-3">Dynamic based on primitive.</td></tr>
+              <tr><td className="p-3 font-mono text-xs">payment_rail</td><td className="p-3">String</td><td className="p-3">Settlement method.</td><td className="p-3">Default: L402_LIGHTNING</td></tr>
+              <tr><td className="p-3 font-mono text-xs">max_budget</td><td className="p-3">Integer</td><td className="p-3">Payment cap in Satoshis or Stablecoin.</td><td className="p-3">Positive Integer.</td></tr>
+              <tr><td className="p-3 font-mono text-xs">sandbox</td><td className="p-3">Boolean</td><td className="p-3">Simulation Mode flag.</td><td className="p-3">If true, returns mocked cryptographic proofs for CI/CD testing. Costs 0.</td></tr>
             </tbody>
           </table>
         </div>
 
-        <p className="font-semibold mt-4">Schema Validation Logic</p>
-        <p>The Translation Engine performs a rigorous pre-flight check on every request:</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Syntactic Validation:</strong> Is the JSON well-formed?</li>
-          <li><strong>Semantic Validation:</strong> Does the sub_type match the primitive?</li>
-           <li><strong>Privacy Check:</strong> Does the requested task violate local privacy laws (e.g., GDPR in Europe)?</li>
-          <li><strong>Liquidity Check:</strong> Is there a human provider within the geofence capable of this task?</li>
-          <li><strong>Solvency Check:</strong> Does the agent have sufficient funds locked in the payment channel?</li>
+        <p><strong>Universal Compliance:</strong> This schema is designed for 1:1 mapping across all three supported runtimes:</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Web:</strong> Maps directly to <code>navigator.modelContext.registerTool()</code> specifications.</li>
+          <li><strong>Cloud:</strong> Maps to MCP Tool Resource definitions (mcp-server).</li>
+          <li><strong>Local:</strong> Maps to POSIX-compliant CLI flags (e.g., intent becomes <code>--intent</code>, budget becomes <code>--budget</code>).</li>
         </ul>
 
-        <h3>4.2 The Five Labor Primitives (The "Verbs")</h3>
-        <p>
-          To reduce the complexity of the physical world into machine-manageable units, APP v2.1 categorizes all human labor into five semantic primitives. These are the "atomic units" of the protocol.
-        </p>
+        <h3 id="section-4-2">4.2 The Five Labor Primitives</h3>
+        <p>APP categorizes all physical labor and commerce verification into five semantic primitives. To reduce the complexity of the physical world into machine-manageable units, APP v2.1 categorizes all human labor into five semantic primitives. These are the &ldquo;atomic units&rdquo; of the protocol.</p>
 
-        <h4>4.2.1 Primitive I: VERIFY ("The Eyes")</h4>
+        <h4 id="section-4-2-1">4.2.1 Primitive I: VERIFY (&ldquo;The Eyes&rdquo;)</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Definition:</strong> A request for ground truth.</li>
-          <li><strong>Use Case:</strong> An AI Hedge Fund analyzes satellite data suggesting a Walmart parking lot is full. To confirm this isn't a spoof, it dispatches a VERIFY primitive.</li>
+          <li><strong>Use Case:</strong> An AI Hedge Fund analyzes satellite data suggesting a Store parking lot is full. To confirm this isn&apos;t a spoof, it dispatches a VERIFY primitive.</li>
           <li><strong>Technical Necessity:</strong> Digital data can be hallucinated. Physical presence is the only source of absolute truth.</li>
-          <li><strong>DePIN Integration:</strong> This primitive relies heavily on Proof of Location (see Section 5). The protocol demands a "Witness Chain" attestation where the worker’s device proves its location via Wi-Fi RTT relative to trusted anchors.</li>
+          <li><strong>DePIN Integration:</strong> This primitive relies heavily on Proof of Location (see Section 5). The protocol demands a &ldquo;Witness Chain&rdquo; attestation where the worker&apos;s device proves its location via Wi-Fi RTT relative to trusted anchors.</li>
         </ul>
 
-        <h4>4.2.2 Primitive II: FIX ("The Hands - Consumer")</h4>
+        <h4 id="section-4-2-2">4.2.2 Primitive II: FIX (&ldquo;The Hands - Consumer&rdquo;)</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Definition:</strong> Residential manual labor and unskilled assembly.</li>
-          <li><strong>Use Case:</strong> An Airbnb management agent detects a "Smart Lock Offline" error. It broadcasts a FIX primitive.</li>
-          <li><strong>Safeguard:</strong> The protocol ensures the payout targets a verified human wallet, preventing "bot-hiring-bot" loops.</li>
+          <li><strong>Use Case:</strong> An Airbnb management agent detects a &ldquo;Smart Lock Offline&rdquo; error. It broadcasts a FIX primitive.</li>
+          <li><strong>Safeguard:</strong> Enforces Proof of Attendance (Wi-Fi pings) to prevent billing fraud.</li>
         </ul>
 
-        <h4>4.2.3 Primitive III: MAINTAIN ("The Hands - Enterprise")</h4>
+        <h4 id="section-4-2-3">4.2.3 Primitive III: MAINTAIN (&ldquo;The Hands - Enterprise&rdquo;)</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Definition:</strong> Certified, skilled technical labor requiring licensure.</li>
           <li><strong>Use Case:</strong> An Enterprise AI detects a cooling failure in a data center.</li>
-          <li><strong>The "Blue Collar" Firewall:</strong> Unlike FIX, the MAINTAIN primitive enforces a "Proof of License" check. The worker must have a verified credential (e.g., an electrician's license hash) stored in their identity wallet.</li>
+          <li><strong>The &ldquo;Blue Collar&rdquo; Firewall:</strong> Unlike FIX, the MAINTAIN primitive enforces a &ldquo;Proof of License&rdquo; check. The worker must have a verified credential (e.g., an electrician&apos;s license hash) stored in their identity wallet. Enforces Chain of Custody and Proof of License.</li>
         </ul>
 
-        <h4>4.2.4 Primitive IV: MOVE ("The Wheels")</h4>
+        <h4 id="section-4-2-4">4.2.4 Primitive IV: MOVE (&ldquo;The Wheels&rdquo;)</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Definition:</strong> Logistics, transport, and courier services.</li>
           <li><strong>Use Case:</strong> An AI personal assistant negotiates the purchase of a vintage lamp and needs it moved from Seller A to Buyer B.</li>
-          <li><strong>Innovation:</strong> The protocol handles the "handoff" logic. It generates a unique QR code (the "Package Passport") that the human driver scans at pickup and dropoff, linking the digital transaction to the physical movement.</li>
+          <li><strong>Safeguard:</strong> The protocol handles the &ldquo;handoff&rdquo; logic. It generates a unique QR code (the &ldquo;Package Passport&rdquo;) that the human driver scans at pickup and dropoff, linking the digital transaction to the physical movement.</li>
         </ul>
 
-        <h4>4.2.5 Primitive V: THINK ("The Brain")</h4>
+        <h4 id="section-4-2-5">4.2.5 Primitive V: THINK (&ldquo;The Brain&rdquo;)</h4>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Definition:</strong> Human-in-the-Loop (HITL) cognitive review, subjective judgment, and RLHF.</li>
           <li><strong>Use Case:</strong> A Legal AI drafts a contract but hits a low confidence score on a specific clause. It triggers a THINK primitive for human review.</li>
-          <li><strong>The RLHF Lock:</strong> This is the recursive loop of the AI economy. Humans are paid to "teach" the agents via the THINK primitive.</li>
+          <li><strong>The RLHF Lock:</strong> This is the recursive loop of the AI economy. Humans are paid to &ldquo;teach&rdquo; the agents via the THINK primitive.</li>
+          <li><strong>Safeguard:</strong> Enforces Consensus Verification (majority vote).</li>
         </ul>
 
-        <h3>4.3 Routing Logic: The "Human Preference" Engine</h3>
-        <p>
-          The APP v2.1 routing algorithm is designed to maximize human welfare. When a request enters the mempool, the "Smart Agent Router" evaluates potential providers based on a hierarchy of preference:
-        </p>
+        <h3 id="section-4-3">4.3 Access Control Determines the Verifier</h3>
+        <p>Agent Proof Protocol splits the VERIFY primitive into two distinct security contexts to handle both public data and private commerce.</p>
+        <div className="my-6 overflow-x-auto rounded-lg border border-slate-200">
+          <table className="min-w-full text-sm">
+            <thead><tr className="bg-slate-50"><th className="p-3 text-left font-semibold border-b-2">Sub-Type</th><th className="p-3 text-left font-semibold border-b-2">Context</th><th className="p-3 text-left font-semibold border-b-2">Verifier</th><th className="p-3 text-left font-semibold border-b-2">Example</th></tr></thead>
+            <tbody className="divide-y divide-slate-100">
+              <tr><td className="p-3 font-mono text-xs">VERIFY_PUBLIC</td><td className="p-3">Public Domain / Exterior</td><td className="p-3">The Human Grid</td><td className="p-3">&ldquo;Check if the ATM is broken.&rdquo; &ldquo;Is the road blocked?&rdquo;</td></tr>
+              <tr><td className="p-3 font-mono text-xs">VERIFY_CUSTODY</td><td className="p-3">Private Domain / Interior</td><td className="p-3">Vendor / Merchant</td><td className="p-3">&ldquo;Prove the cake is spelled correctly.&rdquo; &ldquo;Prove the package is sealed.&rdquo;</td></tr>
+              <tr><td className="p-3 font-mono text-xs">VERIFY_CHAIN</td><td className="p-3">Handoff Point</td><td className="p-3">Logistics Driver</td><td className="p-3">&ldquo;Photo of package at doorstep.&rdquo;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>The Commerce Workflow (&ldquo;The Smart Handshake&rdquo;):</strong> In private commerce (e.g., ordering a birthday cake), the AI Agent does not hire a stranger. Instead, it enforces a &ldquo;Digital Gate&rdquo; on the Merchant using VERIFY_CUSTODY.</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>The Lock:</strong> Agent orders but withholds final payment/pickup signal.</li>
+          <li><strong>The Proof:</strong> Vendor receives a secure link, snaps a Geofenced photo of the item via browser (no app needed).</li>
+          <li><strong>The Release:</strong> Agent&apos;s Computer Vision validates the item. Funds release instantly.</li>
+        </ul>
+
+        <h3 id="section-4-4">4.4 The Human Grid Fallback Protocol (Handling the Skill Gap)</h3>
+        <p>In regions lacking specialized labor marketplaces (e.g., Field Nation, TaskRabbit), APP v2.3 utilizes the &ldquo;Human Grid&rdquo;&mdash;a distributed network of casual users embedded via partner apps. Since Grid Nodes (users) are often unskilled, the protocol enforces a Dynamic Primitive Downgrade to ensure task completion without liability.</p>
+        <p>If a FIX or MAINTAIN request cannot be routed to a Certified Partner (Tier 1) within the target TTL (Time-To-Live), the Protocol automatically downgrades the request logic:</p>
+
+        <h4 id="section-4-4-1">4.4.1 The Downgrade (FIX &rarr; VERIFY)</h4>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Trigger:</strong> No certified technician found in the target geolocation (e.g., Accra, Ghana) within 10 minutes.</li>
+          <li><strong>Action:</strong> The Agent changes the Primitive from FIX (Independent Execution) to VERIFY (Guided Presence).</li>
+          <li><strong>The Logic:</strong> The AI Agent assumes the role of the &ldquo;Brain&rdquo; and recruits a Human Grid Node to act solely as the &ldquo;Hands/Eyes.&rdquo;</li>
+        </ul>
+
+        <h4 id="section-4-4-2">4.4.2 A2UI &ldquo;Remote Avatar&rdquo; Mode (Guided Execution)</h4>
+        <p><strong>Interface:</strong> The Human Grid Node receives a declarative, step-by-step A2UI stream.</p>
+        <p><strong>Workflow:</strong> Instead of a broad command like &ldquo;Fix the Generator,&rdquo; the user sees:</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>Screen 1: &ldquo;Walk to the Generator.&rdquo; (Verified via Geofence)</li>
+          <li>Screen 2: &ldquo;Point Camera at the Fuel Gauge.&rdquo; (Verified via Computer Vision)</li>
+          <li>Screen 3: &ldquo;Turn the Red Valve 90 degrees clockwise.&rdquo; (Verified via Real-time Video Stream)</li>
+        </ul>
+        <p><strong>Settlement:</strong> The user is paid for Compliance, not Expertise. The liability for the repair remains with the AI Agent&apos;s instruction set, not the human&apos;s skill.</p>
+
+        <h4 id="section-4-4-3">4.4.3 The Human Grid Priority Router</h4>
+        <p>The Router prioritizes execution in this order:</p>
+        <ol className="list-decimal pl-6 space-y-1">
+          <li><strong>Tier 1 (Certified):</strong> Enterprise APIs (e.g., Field Nation, Uber Direct).</li>
+          <li><strong>Tier 2 (Verified Nodes):</strong> Users operating on the Reference Implementation Standard (e.g., The Official Validator App).</li>
+          <li><strong>Tier 3 (Partner Grid):</strong> Third-party applications integrating the Supply SDK (e.g., Fintech/Gaming partners).</li>
+        </ol>
+
+        <h3 id="section-4-5">4.5 Vertical Integration: The Tri-State Integration Strategy</h3>
+        <p>To eliminate the &ldquo;Integration Tax,&rdquo; APP v2.4 natively supports the three dominant runtimes for AI Agents. We do not force developers to adapt to the Protocol; the Protocol adapts to the Agent&apos;s native environment.</p>
+
+        <h4 id="section-4-5-1">4.5.1 Cloud-Native: The Model Context Protocol (MCP)</h4>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Target:</strong> Enterprise &amp; Cloud-Hosted Agents (e.g., Claude Desktop, CrewAI, AutoGen).</li>
+          <li><strong>Mechanism:</strong> The APP Translation Engine functions as a compliant MCP Server. It exposes the five Labor Primitives as standardized &ldquo;Resources&rdquo; and &ldquo;Tools&rdquo; that can be mounted into any MCP host.</li>
+          <li><strong>Benefit:</strong> Plug-and-play discovery. A cloud agent can &ldquo;discover&rdquo; the ability to hire a technician simply by connecting to the APP MCP endpoint.</li>
+        </ul>
+
+        <h4 id="section-4-5-2">4.5.2 Browser-Native: Web Model Context Protocol (WebMCP)</h4>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Target:</strong> Browser Agents &amp; Assistants (e.g., Chrome/Gemini Nano).</li>
+          <li><strong>Mechanism:</strong> APP supports <code>navigator.modelContext</code>. When an Agent visits an APP-enabled dashboard, it detects the PhysicalTask tool definition injected into the DOM.</li>
+          <li><strong>Benefit:</strong> Zero-friction dispatch. An Agent browsing a logistics provider&apos;s site can detect the APP tool and execute a verified dispatch without leaving the browser context.</li>
+        </ul>
+
+        <h4 id="section-4-5-3">4.5.3 Local-Native: The Unix Standard (CLI)</h4>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Target:</strong> Sovereign &amp; Terminal-Based Agents (e.g., OpenClaw, Local LLaMA, Python Scripts).</li>
+          <li><strong>Mechanism:</strong> The Standard Streams Pipeline (JSON-over-Pipe). For agents that eschew servers, APP provides a standalone binary (<code>agent-proof</code>). This tool accepts task parameters via standard flags (argv) or stdin and outputs structured, parseable JSON to stdout.</li>
+          <li><strong>Benefit:</strong> Composable autonomy. This allows local agents to utilize the &ldquo;Unix Philosophy&rdquo;&mdash;piping the output of a reasoning chain directly into a physical execution command without managing webhooks or API keys.</li>
+        </ul>
+
+        <h3 id="section-4-6">4.6 The Interface Layer: A2UI and Declarative Rendering</h3>
+        <p>APP adopts the Agent-to-User Interface (A2UI) standard. Instead of sending static text, the protocol streams a secure, JSON-based UI blueprint describing the task.</p>
+        <p><strong>WebMCP Integration:</strong> For browser-based workers, these A2UI components are delivered via the WebMCP Declarative API, allowing the worker&apos;s browser to render native inputs (e.g., &ldquo;Take Photo of Meter&rdquo;) without requiring a dedicated app installation.</p>
+
+        <h3 id="section-4-7">4.7 Orchestration: Molecular Intents &amp; Compound Workflows</h3>
+        <p>Real-world operations rarely fit into a single atomic action. A &ldquo;Kitchen Renovation&rdquo; is not a single FIX primitive; it is a sequenced chain of VERIFY (measurements), MOVE (delivery), FIX (installation), and VERIFY (inspection). If the Protocol only supported atomic tasks, it would merely be a job board. To support a global economy, it must function as a Project Management Engine.</p>
+
+        <h4 id="section-4-7-1">4.7.1 The &ldquo;General Contractor&rdquo; Model</h4>
+        <p>APP acknowledges that the Protocol does not &ldquo;know&rdquo; what a house is; it only knows the 1,000 steps required to build one. Therefore, the Agent acts as the General Contractor, and the Protocol enables the dependency logic. We introduce Recursive Orchestration, allowing Agents to submit Directed Acyclic Graphs (DAGs) of tasks. In this model, downstream primitives are cryptographically locked until upstream prerequisites are met.</p>
+
+        <h4 id="section-4-7-2">4.7.2 The Dependency Array (The Logic)</h4>
+        <p>By utilizing the <code>dependencies</code> field in the Request Schema, Agents create &ldquo;Molecular Intents.&rdquo;</p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <strong>Priority 1: The Federated Native Swarm (SDK Mesh)</strong>
-            <br />Target: A distributed mesh of human sensors accessed via the APP Embedded SDK.
-            <br />Composition: This layer is not a single app. It is a federation of "Host Applications" (Neo-banks, Wallets, Play-to-Earn Games, Telcos) that have integrated the AgentProof_Verify_SDK to monetize their user base.
-            <br />Latency: Zero-latency execution. The protocol routes tasks directly to active users inside third-party apps who are available for micro-verifications.
-          </li>
-          <li>
-            <strong>Priority 2: Aggregator Bridge</strong>
-            <br />Target: Legacy platforms (Uber, TaskRabbit, etc.).
-            <br />Trigger: If no Native Swarm worker is available within the max_response_time window.
-            <br />Economics: Agent pays the legacy platform's fee structure plus a Protocol Bridge Fee. The APP protocol acts as the "API Client" on behalf of the agent, handling the complexity of the external transaction.
-          </li>
-        </ul>
-        <p>
-          This "waterfall" logic ensures high reliability (by falling back to legacy pools) while incentivizing the growth of the native human network.
-        </p>
-      </section>
-
-      {/* 5. Trust & Verification */}
-      <section id="verification" className="mb-16 scroll-mt-24">
-        <h2>5. The Trust & Verification Layer: DePIN</h2>
-        <p>
-          In the Agentic Economy, money is easy; truth is hard. An Agent can transfer USDC in milliseconds, but it cannot verify if a service was performed. Without Ground Truth, payments are just leaks.
-        </p>
-        <p>
-          APP v2.1 introduces "Proof of Physics" as a prerequisite for settlement. In a world of deepfakes and AI voice synthesis, "Digital Identity" is insufficient. We leverage DePIN (Decentralized Physical Infrastructure Network) principles to cryptographically prove that a human performed the work. We do not allow an Agent to release funds based on a digital promise; we require cryptographic proof—via Wi-Fi RTT and Witness Chains—that the physical world has changed state. This protects the Agent’s capital and ensures that the human economy is built on verifiable value, not digital arbitrage.
-        </p>
-
-        <h3>5.1 Proof of Location: Wi-Fi RTT (802.11mc)</h3>
-        <p>
-          GPS is easily spoofed. A rooted Android device can report any location to a server. To solve this, APP v2.1 mandates Wi-Fi Round Trip Time (RTT) for Trust Level 1 verification. For legacy infrastructure lacking 802.11mc support, the protocol accepts Trust Level 2 (Signed GPS + Photo Metadata + Network Triangulation).
-        </p>
-
-        <h4>5.1.1 The Physics of Trust</h4>
-        <p>
-          Unlike GPS (which is passive reception), Wi-Fi RTT is an active query. The human's device sends a burst of packets to nearby Wi-Fi Access Points (Anchors). It measures the precise time of flight for the signal to return.
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Speed of Light Constant:</strong> Since radio waves travel at a constant speed ($c$), the time ($t$) directly correlates to distance ($d=c \times t/2$).</li>
-          <li><strong>Anti-Spoofing:</strong> To spoof this, a bot would need to alter the laws of physics or hack the firmware of the specific commercial router at the physical location in real-time.</li>
+          <li><strong>Blocking State:</strong> The Protocol holds a dependent request (e.g., &ldquo;Install Sink&rdquo;) in a PENDING_DEPENDENCY state. It is not broadcast to the Human Grid until the parent tasks (e.g., &ldquo;Deliver Sink&rdquo;) emit a STATUS: COMPLETED event.</li>
+          <li><strong>Context Injection:</strong> The output of Task A (e.g., a photo of the delivered materials) is automatically injected as the context_payload for Task B (the installer). This ensures the worker has the full history without the Agent needing to re-upload data.</li>
         </ul>
 
-        <h4>5.1.2 The Witness Chain</h4>
-        <p>We implement a "Witness Chain" model. The Wi-Fi Access Points act as "Witnesses."</p>
-        <ul className="list-decimal pl-6 space-y-2">
-          <li>The Worker's device initiates an RTT ranging request.</li>
-          <li>Nearby Access Points respond.</li>
-          <li><strong>Secure Enclave Signing:</strong> The RTT measurement is signed inside the device's Trusted Execution Environment (TEE). This hardware-level signature proves the OS hasn't tampered with the sensor data.</li>
-        </ul>
-
-        <h3>5.2 Identity: ERC-8004 and Proof of Humanity</h3>
-        <p>To facilitate trust between a silicon agent and a biological worker, APP v2.1 adopts a dual-identity stack.</p>
-
-        <h4>5.2.1 The Agent: ERC-8004 (Trustless Agents)</h4>
-        <p>
-          An AI agent is not a person; it is a smart contract with a bank account. We utilize the ERC-8004 standard to give agents a verifiable on-chain identity. This allows agents to broadcast their capabilities and "hiring" status to the network in a censorship-resistant manner.
-        </p>
-
-        <h4>5.2.2 The Worker: Proof of Humanity</h4>
-        <p>
-          The worker must prove they are unique and human to prevent "Sybil Attacks." We advocate for integration with privacy-preserving identity providers that utilize Zero-Knowledge Proofs (ZKPs), allowing a worker to prove "I am a unique human with a rating &gt; 4.5" without revealing their real name or home address to the AI agent.
-        </p>
-        
-        <h3>5.3 The Privacy Firewall: GDPR & Biometric Safety</h3>
-        <p>
-        To ensure the APP network does not become a tool for surveillance, the protocol implements a mandatory "Privacy Filter" at the SDK level. This is critical for Remittance Verification (e.g., verifying a delivery of cement for AnytimeAfrica construction projects) where the goal is to verify the asset, not the person.
-        </p>
-
-        <h4>5.3.1 On-Device Anonymization (Edge Compute)</h4>
-        <p>
-        If privacy_mode is set to ANONYMIZED (default for public verification), the APP SDK processes the image locally on the worker's device before upload.
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Mechanism:</strong> An on-device computer vision model detects faces, license plates, and personal documents.</li>
-            <li><strong>Redaction:</strong> It applies a Gaussian Blur or solid block redaction to these regions.</li>
-            <li><strong>Result:</strong> The Agent receives a photo of the "Ground Truth" (e.g., the cement bags, the building facade) but receives zero PII (Personally Identifiable Information) of bystanders or workers.</li>
-        </ul>
-
-        <h4>5.3.2 Ephemeral Verification ("The Flash Protocol")</h4>
-        <p>For high-sensitivity tasks (e.g., "Is the line at the clinic long?"), the Agent does not need the photo; it needs the answer.</p>
-        <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Process:</strong> The worker takes the photo. The local APP AI analyzes it and generates a boolean result (e.g., CROWD_DENSITY: HIGH).</li>
-            <li><strong>Hashing:</strong> The photo is cryptographically hashed to prove it existed at that time/location.</li>
-            <li><strong>Deletion:</strong> The raw image is deleted from the device and never uploaded to the cloud. Only the Hash + Metadata + Answer is transmitted.</li>
-        </ul>
-
-        <h4>5.3.3 The Consent Handshake</h4>
-        <p>
-        For VERIFY primitives occurring on private property (e.g., inside a store), the protocol mandates a "Digital Handshake." The worker must present a QR code to the property owner/manager, who scans it to grant temporary, cryptographic "Photography Consent" for that specific session.
-        </p>
-      </section>
-
-      {/* 6. Settlement Layer */}
-      <section id="settlement" className="mb-16 scroll-mt-24">
-        <h2>6. The Settlement Layer: x402 and Streaming Cash</h2>
-        <p>
-          The legacy financial system (SWIFT, ACH, Credit Cards) is too slow for the Agentic Era. An AI agent making 1,000 micro-decisions a minute cannot wait for a credit card authorization for each one.
-        </p>
-
-        <h3>6.1 x402: The Missing HTTP Code</h3>
-        <p>
-          The original HTTP protocol reserved status code 402 Payment Required. It was never implemented—until now. APP v2.1 utilizes the x402 (L402) protocol standard.
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Mechanism:</strong> When an agent requests a service via APP, the API responds with 402 Payment Required and a Lightning Network invoice (a cryptographic challenge).</li>
-          <li><strong>Atomic Swap:</strong> The agent pays the invoice instantly (in milliseconds). The receipt (the "Preimage") acts as the authentication token to access the service.</li>
-        </ul>
-
-        <h3>6.2 Streaming Payments (The "Salary Hose")</h3>
-        <p>
-          For time-based tasks (e.g., a "THINK" task requiring 1 hour of review), APP v2.1 supports Payment Streaming. Every second the worker is active (verified by periodic "Proof of Location"), funds flow directly to their wallet. This "Money-over-IP" architecture transforms labor from a debt-based contract (work now, get paid later) into a real-time asset swap.
-        </p>
-
-        <h3>6.3 Hybrid Rail Interoperability (Fiat & Card Networks)</h3>
-        <p>
-          While x402 enables machine-native settlement, APP v2.1 ensures full backward compatibility with the global banking system. The Settlement Layer includes standardized adapters for Visa Direct, Mastercard Send, and Stripe Connect. This allows "Hybrid Agents"—those funded by corporate treasury accounts—to instantly push fiat currency to worker debit cards globally, bypassing legacy ACH delays while retaining the speed of crypto-native settlement.
-        </p>
-      </section>
-
-      {/* 7. Economic Model */}
-      <section id="economic-model" className="mb-16 scroll-mt-24">
-        <h2>7. Economic Model: The Liquidity Efficiency</h2>
-        <p>
-          The economic engine of APP v2.1 is designed to create a flywheel effect that accelerates the adoption of both AI agents and human participation through pure market efficiency.
-        </p>
-
-        <h3>7.1 The Aggregator Advantage</h3>
-        <p>
-          In standard marketplaces, liquidity is the constraint. APP v2.1 solves this via Universal Aggregation. By bridging all marketplaces, it offers the deepest pool of labor in the world. An AI Agent using APP has simultaneous access to the drivers of Uber, the couriers of DoorDash, and the freelancers of the Native Swarm.
-        </p>
-
-        <h3>7.2 The Embedded Supply Thesis (Decoupling Supply)</h3>
-        <p>
-          Historically, labor supply was locked inside "Walled Gardens" (e.g., you must download the Uber Driver app to work for Uber). APP v2.1 introduces the Embedded Supply model.
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Mechanism:</strong> By providing a white-label Verification SDK, the protocol allows any digital application to become a labor supplier.</li>
-          <li><strong>Host Apps:</strong> Neo-Banks can allow users to "Top Up" accounts via verification tasks; Games can incentivize players to scan real-world objects for in-game currency; Telcos can offset bills via network diagnostics.</li>
-          <li><strong>Result:</strong> This creates a "Permissionless Swarm" where millions of dormant users are instantly activated as human sensors, without the friction of downloading a new gig economy app.</li>
+        <h4 id="section-4-7-3">4.7.3 The &ldquo;Manager&rdquo; Agent (Recursive Hierarchy)</h4>
+        <p>For hyper-complex tasks involving dozens of steps, the Protocol allows an Agent to hire a Human Project Manager via a high-level THINK primitive.</p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li><strong>Use Case:</strong> &ldquo;Manage this renovation.&rdquo;</li>
+          <li><strong>Mechanism:</strong> The Agent triggers THINK: MANAGEMENT. The selected human is granted limited authority (via a scoped API key) to issue sub-primitives (e.g., approve a FIX milestone) within the Agent&apos;s budget, effectively keeping the &ldquo;Human-in-the-Loop&rdquo; for subjective quality control.</li>
         </ul>
       </section>
 
-      {/* 8. Implementation Guide */}
-      <section id="implementation" className="mb-16 scroll-mt-24">
-        <h2>8. Implementation Guide: The "First Principles" Workflow</h2>
-        <p>
-          To illustrate the protocol in action, consider a full lifecycle transaction: "The Autonomous Property Manager."
-        </p>
-        <p><strong>Scenario:</strong> An AI Agent (Agent_0x88) managing a rental property detects a water leak via an IoT sensor.</p>
-
-        <h3>Step 1: The Request (Digital Demand)</h3>
-        <p>The Agent constructs a FIX primitive request:</p>
-        <pre><code className="language-json">{`{
-  "intent": "RESTORE_SERVICE",
-  "primitive": "FIX",
-  "sub_type": "PLUMBING",
-  "human_verification": true,
-  "privacy_mode": "ANONYMIZED",
-  "payload": {
-    "issue": "PIPE_BURST",
-    "location": "34.0522,-118.2437",
-    "severity": "CRITICAL"
-  },
-  "payment_rail": "L402_LIGHTNING",
-  "max_budget": 15000000 // sats (~$150 USD)
-}`}</code></pre>
-
-        <h3>Step 2: The Translation (Middleware)</h3>
-        <p>The APP Translation Engine receives the JSON.</p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Check 1:</strong> Is there a Native Swarm plumber nearby? &rarr; Result: Negative.</li>
-          <li><strong>Check 2:</strong> Query Aggregator Bridge. &rarr; Result: Positive (PROVIDER_ID: "Partner_V3").</li>
-          <li><strong>Action:</strong> Convert APP JSON to Partner Schema POST /v1/tasks.</li>
-        </ul>
-
-        <h3>Step 3: The Dispatch (Human Supply)</h3>
-        <p>A human worker on the Partner Network receives the job. They accept.</p>
-
-        <h3>Step 4: The Execution (Physical Work)</h3>
-        <p>The plumber arrives. They fix the leak.</p>
-
-        <h3>Step 5: The Verification (DePIN)</h3>
-        <p>The Agent requires proof before releasing final payment.</p>
-        <ul className="list-disc pl-6 space-y-2">
-            <li>The Plumber triggers a VERIFY handshake.</li>
-            <li>The phone performs a Wi-Fi RTT scan, proving the device is physically inside the apartment.</li>
-            <li>The Plumber takes a photo of the fixed pipe. The APP SDK automatically blurs any family photos in the background (Privacy Firewall).</li>
-        </ul>
-
-        <h3>Step 6: The Settlement (Value Transfer)</h3>
-        <p>The Agent validates the RTT proof and the sanitized photo. The Agent instantly streams the payment via L402. Transaction Finalized.</p>
-      </section>
-
-      {/* 9. Conclusion */}
-      <section id="conclusion" className="mb-16 scroll-mt-24">
-        <h2>9. Conclusion: The TCP/IP of Labor</h2>
-        <p>
-          The Agentic Era represents the fourth great continuity of industrialization. Just as steam amplified muscle and silicon amplified logic, the Agent Proof Protocol amplifies agency.
-        </p>
-        <p>
-          We stand at the threshold of a civilizational bifurcation: Automated Isolation, where AI operates in closed digital loops that exclude humanity, or Algorithmic Symbiosis, where AI becomes the primary driver of human economic opportunity.
-        </p>
-        <p>
-          APP v2.1 chooses Symbiosis. By closing the "Air Gap" between digital intent and physical execution, we transform the rise of autonomous agents from a threat of displacement into a guarantee of employment. We position the human workforce not as a competitor to AI, but as its essential physical complement—the "Biological Hardware" that gives the digital brain its hands, eyes, and wheels.
-        </p>
-        <p>
-          This is more than a technical standard; it is the blueprint for Universal Basic Employment (UBE). It ensures that as the marginal cost of digital intelligence falls to zero, the value of physical reality—and the humans who verify it—rises to meet it.
-        </p>
-        <p className="font-bold text-lg mt-4">Demand is Digital. Supply is Biological. The Protocol is the Bridge.</p>
-        <p className="italic text-slate-500 mt-2">End of White Paper</p>
-      </section>
-
-      {/* Appendix A */}
-      <section id="appendix-a" className="mb-16 scroll-mt-24 border-t border-slate-200 pt-8">
-        <h2>Appendix A: Global Adapter Library (Reference Implementation)</h2>
-        <p>
-          To ensure immediate global liquidity, the APP v2.1 Reference Implementation (AgentCrowds) includes pre-built adapters for the following execution networks. This allows Developers to utilize the Protocol without building custom integrations for each provider.
-        </p>
-
-        <h3>A.0 PRIMITIVE: EMBEDDED SWARM (The SDK Layer)</h3>
-        <p>
-        <strong>AgentProof SDK (React Native / iOS / Android):</strong> A drop-in library that enables any third-party application to function as a "Native Swarm Node." It handles Camera access, Wi-Fi RTT Logic, Liveness Detection, and Wallet Settlement, allowing Host Apps to monetize their user base via the protocol.
-        </p>
-
-        <h3>A.1 PRIMITIVE: MOVE (Logistics & Delivery)</h3>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Uber Direct (Global):</strong> Exposes a DaaS (Delivery-as-a-Service) endpoint for synchronous courier dispatch, utilizing webhook callbacks for real-time state tracking (pickup, en-route, delivered).</li>
-          <li><strong>DoorDash Drive (North America):</strong> Provides a white-label logistics API optimized for high-volume retail fulfillment with flat-rate pricing schemas and guaranteed SLAs.</li>
-          <li><strong>GrabExpress (Southeast Asia):</strong> Offers high-concurrency motorcycle and van dispatch via RESTful API, supporting multi-stop routing across Singapore, Thailand, Indonesia, and Vietnam.</li>
-          <li><strong>Rappi (Latin America):</strong> Integrates deep inventory and logistics logic, allowing agents to execute complex "buy-and-deliver" workflows via the Store OS API in Mexico and Brazil.</li>
-          <li><strong>Lalamove (Asia/LatAm):</strong> Provides programmatic access to a fractional fleet of on-demand drivers for same-hour delivery, supporting distinct vehicle type selection via JSON payload.</li>
-          <li><strong>Borzo (India/Global):</strong> An API-first courier aggregation layer for developing markets, optimizing for route efficiency and low-latency dispatch in high-density urban zones.</li>
-          <li><strong>Gokada / MAX.ng (Africa):</strong> Specialized API endpoints for hailing EV and motorcycle logistics fleets, engineered to navigate the unique geospatial constraints of Lagos and Nigeria.</li>
-          <li><strong>Stuart (Europe):</strong> DPD Group’s urban logistics API, offering precise scheduling windows and multi-modal transport selection for major European capitals.</li>
-          <li><strong>Roadie (US):</strong> A crowdsourced mesh network API owned by UPS, optimized for routing "Out-of-Gauge" (OOG) and LTL (Less-Than-Truckload) payloads that bypass standard courier rails.</li>
-        </ul>
-
-        <h3>A.2 PRIMITIVE: FIX (General & Skilled Labor)</h3>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>TaskRabbit (Global):</strong> Exposes the IKEA Partner API schema (via Partner Integration or Headless Fallback), allowing agents to inject structured task objects for assembly and mounting directly into the worker marketplace.</li>
-          <li><strong>Urban Company (Asia/UAE):</strong> A full-stack managed marketplace API that handles worker training, uniform logistics, and biometric identity verification for home services.</li>
-          <li><strong>Thumbtack (North America):</strong> A lead-generation API enabling agents to broadcast project requirements to local professionals and programmatically parse bid responses.</li>
-          <li><strong>SweepSouth (Africa):</strong> The dominant on-demand home services API in South Africa, providing structured booking endpoints for domestic cleaning and gardening labor.</li>
-          <li><strong>Field Nation (North America):</strong> An enterprise infrastructure API for dispatching "Work Orders" to licensed technicians, enforcing rigorous certification gating and insurance validation logic.</li>
-          <li><strong>WorkMarket (Global):</strong> An ADP-backed "Labor Cloud" API that abstracts workforce compliance, automatically handling tax taxonomy (1099/W2) and background check assertions.</li>
-          <li><strong>Airtasker (Australia/UK):</strong> A flexible marketplace API allowing agents to post unstructured "Spot Tasks" via open bidding auctions for non-standard labor requirements.</li>
-          <li><strong>Roamler (Europe):</strong> A distributed workforce API specialized in generating synchronous retail intelligence and shelf-stock verification data for CPG brands.</li>
-        </ul>
-
-        <h3>A.3 PRIMITIVE: THINK (Cognitive & RLHF)</h3>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Scale AI (Global):</strong> The enterprise standard for programmatic RLHF (Reinforcement Learning from Human Feedback), offering pipelines for model evaluation and fine-tuning data generation.</li>
-          <li><strong>Amazon MTurk (Global):</strong> A legacy micro-tasking API allowing agents to spawn Human Intelligence Tasks (HITs) via SDK for massive-scale consensus and data cleaning.</li>
-          <li><strong>Toloka (Global):</strong> A Python-native crowdsourcing platform for integrating human labeling loops directly into ML training pipelines via API.</li>
-          <li><strong>Upwork Enterprise (Global):</strong> Provides an Enterprise Suite API for the programmatic hiring and management of freelance talent for complex, multi-stage cognitive workflows.</li>
-        </ul>
-
-        <h3>A.4 SETTLEMENT RAILS (Fiat, Card & Crypto)</h3>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Payman AI (Agent Native):</strong> A custodial banking abstraction layer allowing autonomous agents to execute ACH and Wire transfers via natural language or REST prompts.</li>
-          <li><strong>Visa Direct (Global):</strong> Leverages the Original Credit Transaction (OCT) rail to push real-time funds directly to billions of eligible debit cards, bypassing batch ACH windows.</li>
-          <li><strong>Mastercard Send (Global):</strong> A push-payment protocol enabling secure, near-real-time fund transfers to consumer cards and digital wallets via the MoneySend network.</li>
-          <li><strong>Stripe Connect (Global):</strong> The industry-standard programmatic payments infrastructure, handling KYC, split-payments, and cross-border payouts to Custom Accounts in 45+ jurisdictions.</li>
-          <li><strong>Marqeta / Lithic (Card Issuing):</strong> Modern card issuing APIs enabling agents to instantaneously generate Just-in-Time (JIT) funded virtual cards for specific merchant category codes (MCCs).</li>
-          <li><strong>Skyfire (Web3):</strong> An orchestration protocol for on-chain agent spend, managing gas abstraction and USDC allow-lists for verified commercial interaction.</li>
-          <li><strong>Wise Platform (Forex):</strong> A cross-border payments API utilizing local bank networks to execute foreign exchange payouts at mid-market rates with high transparency.</li>
-          <li><strong>Yellow Card (Africa):</strong> A crypto-rail API facilitating the automated off-ramping of USDC/USDT into local African fiat currencies via mobile money and bank rails.</li>
-          <li><strong>Strike API (Global):</strong> Integrates Bitcoin Lightning Network settlement (Bolt 11) to enable instant, final, and near-zero fee micropayments globally.</li>
-        </ul>
-
-        <h3>A.5 VERIFICATION (DePIN & Identity)</h3>
-        <ul className="list-disc pl-6 space-y-2">
-          <li><strong>Witness Chain (DePIN):</strong> A decentralized "Proof of Location" protocol utilizing eigen-layer logic to verify bandwidth and physical state assertions.</li>
-          <li><strong>World ID (Identity):</strong> A privacy-preserving identity protocol using ZK-SNARKs to prove "Personhood" without revealing PII, preventing Sybil attacks.</li>
-          <li><strong>Android Wi-Fi RTT (IEEE 802.11mc):</strong> Hardware-level Fine Timing Measurement (FTM) that calculates "Time-of-Flight" to cryptographically prove distance from Access Points.</li>
-          <li><strong>Plaid (Auth):</strong> Standardizes financial data access, providing authenticated Item tokens to verify worker bank account ownership and balance capability.</li>
-          <li><strong>Trulioo (KYC):</strong> A global Electronic Identity Verification (eIDV) API aggregation layer, resolving identity attributes against government bureaus in 195 countries.</li>
-        </ul>
-      </section>
-
-      {/* Appendix B */}
-      <section id="appendix-b" className="mb-16 scroll-mt-24 border-t border-slate-200 pt-8">
-        <h2>Appendix B: Extended API Documentation</h2>
-
-        <h3>B.1 The VERIFY Primitive - JSON Detail</h3>
-        <pre><code className="language-json">{`{
-  "primitive": "VERIFY",
-  "privacy_mode": "EPHEMERAL",
-  "requirements": {
-    "target_coordinates": {"lat": 40.7128, "lng": -74.0060},
-    "tolerance_meters": 5,
-    "proof_type": ["PHOTO", "RTT_SIGNATURE"],
-    "min_reputation_score": 80
-  },
-  "callback_url": "https://agent-node.eth/webhook/verification"
-}`}</code></pre>
-
-        <h3>B.2 The THINK Primitive - RLHF Payload</h3>
-        <pre><code className="language-json">{`{
-  "primitive": "THINK",
-  "sub_type": "RLHF_RANKING",
-  "payload": {
-    "prompt": "Explain quantum physics to a 5-year-old.",
-    "completions": ["A", "B"],
-    "instruction": "Rank completion A vs B for simplicity."
-  },
-  "payment_rail": "L402_STREAM",
-  "rate": "50 sats/task"
-}`}</code></pre>
-      </section>
+      {/* Sections 5-8 + Appendices */}
+      <WhitepaperSections5to8 />
     </article>
   );
 }

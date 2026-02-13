@@ -9,30 +9,42 @@ const NAV_ITEMS = [
         category: "Overview",
         items: [
             { label: "Abstract", href: "#abstract" },
-            { label: "1. Introduction", href: "#introduction" },
-            { label: "2. Problem Statement", href: "#problem" },
+            { label: "1. Introduction", href: "#section-1" },
+            { label: "1.1 From Retrieval to Action", href: "#section-1-1" },
+            { label: "1.2 The Trust & Runtime Gap", href: "#section-1-2" },
+            { label: "1.3 The APP Mandate", href: "#section-1-3" },
+            { label: "2. Problem Statement", href: "#section-2" },
         ]
     },
     {
         category: "Core Protocol",
         items: [
-            { label: "3. Economic Thesis", href: "#economic-thesis" },
-            { label: "4. Architecture", href: "#architecture" },
+            { label: "3. Economic Thesis", href: "#section-3" },
+            { label: "3.1 Tier 1: Partner Network", href: "#section-3-1" },
+            { label: "3.2 Tier 2: Human Grid", href: "#section-3-2" },
+            { label: "3.3 Distribution Strategy", href: "#section-3-3" },
+            { label: "4. Architecture", href: "#section-4" },
+            { label: "4.1 Input Schema", href: "#section-4-1" },
+            { label: "4.2 Labor Primitives", href: "#section-4-2" },
+            { label: "4.3 Access Control", href: "#section-4-3" },
+            { label: "4.4 Human Grid Fallback", href: "#section-4-4" },
+            { label: "4.5 Tri-State Integration", href: "#section-4-5" },
+            { label: "4.6 A2UI Interface Layer", href: "#section-4-6" },
+            { label: "4.7 Orchestration", href: "#section-4-7" },
         ]
     },
     {
         category: "Infrastructure",
         items: [
-            { label: "5. Trust & DePIN", href: "#verification" },
-            { label: "6. Settlement", href: "#settlement" },
-            { label: "7. Economic Model", href: "#economic-model" },
+            { label: "5. Trust & DePIN", href: "#section-5" },
+            { label: "6. Financial Unification", href: "#section-6" },
         ]
     },
     {
         category: "Reference",
         items: [
-            { label: "8. Implementation", href: "#implementation" },
-            { label: "9. Conclusion", href: "#conclusion" },
+            { label: "7. Implementation Guide", href: "#section-7" },
+            { label: "8. Conclusion", href: "#section-8" },
             { label: "Appendix A: Adapters", href: "#appendix-a" },
             { label: "Appendix B: API Docs", href: "#appendix-b" },
         ]
@@ -74,31 +86,34 @@ export default function Sidebar() {
                     ${isOpen ? 'translate-x-0' : '-translate-x-full'}
                 `}
             >
-                <nav className="h-full overflow-y-auto p-6 space-y-8 pt-20 lg:pt-6">
+                <nav className="h-full overflow-y-auto p-6 space-y-6 pt-20 lg:pt-6">
                     {NAV_ITEMS.map((section, idx) => (
                         <div key={idx}>
-                            <h5 className="mb-3 text-xs font-semibold text-slate-900 uppercase tracking-wider">
+                            <h5 className="mb-2 text-xs font-semibold text-slate-900 uppercase tracking-wider">
                                 {section.category}
                             </h5>
-                            <ul className="space-y-2">
-                                {section.items.map((item, i) => (
-                                    <li key={i}>
-                                        <Link
-                                            href={item.href}
-                                            onClick={closeMenu}
-                                            className="block text-[14px] text-slate-600 hover:text-blue-600 hover:translate-x-0.5 transition-all"
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
+                            <ul className="space-y-1">
+                                {section.items.map((item, i) => {
+                                    const isSubItem = item.label.match(/^\d+\.\d/);
+                                    return (
+                                        <li key={i}>
+                                            <Link
+                                                href={item.href}
+                                                onClick={closeMenu}
+                                                className={`block text-[13px] text-slate-500 hover:text-blue-600 hover:translate-x-0.5 transition-all ${isSubItem ? 'pl-3 text-[12px]' : 'font-medium text-slate-700'}`}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     ))}
 
-                    <div className="pt-6 border-t border-slate-100 mt-6 pb-24 lg:pb-0">
+                    <div className="pt-4 border-t border-slate-100 mt-4 pb-24 lg:pb-0">
                         <Link
-                            href="https://github.com/agent-proof-protocol"
+                            href="https://github.com/EndlessCrowds/agent-proof-protocol"
                             target="_blank"
                             onClick={closeMenu}
                             className="flex items-center gap-2 text-xs text-slate-500 hover:text-slate-900"
