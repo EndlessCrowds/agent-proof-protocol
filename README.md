@@ -119,3 +119,10 @@ See `CONTRIBUTING.md` for details.
 MIT Open Source.
 
 Created by **Roger Kwasi Senam Mensah**.
+
+---
+
+## 🧮 Cryptographic Trust & Whitepaper
+APP doesn't just route data; it mathematically proves reality using WebGPU edge-computed zk-SNARKs. 
+* [Read the Formal Coexistence Standard Whitepaper](./whitepaper/APP_COEXISTENCE_STANDARD.md)
+* [Inspect the Interactive Liveness Circuits](./circuits/liveness.circom)
