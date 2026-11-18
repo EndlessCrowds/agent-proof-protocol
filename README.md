@@ -1,128 +1,64 @@
-# Agent Proof Protocol (APP) v2.4
+# The Agent Proof Protocol (APP)
+## The Coexistence Standard
 
-![PyPI](https://img.shields.io/pypi/v/agent-proof-protocol?color=blue&style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Beta-orange?style=for-the-badge)
-![Integration](https://img.shields.io/badge/Integrations-OpenClaw%20%7C%20CrewAI%20%7C%20LangChain-blueviolet?style=for-the-badge)
+**Date:** February 1, 2026  
+**License:** MIT  
+**Architect:** Roger Kwasi Senam Mensah  
 
-> **The "TCP/IP of Reality."**
-> The Universal Settlement Layer enabling AI Agents to verify, fix, and move assets in the physical world.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/badge/Website-agentproofprotocol.com-blue)](https://agentproofprotocol.com)
 
----
-
-## ⚡ What is this?
-
-**Agent Proof Protocol (APP)** is an open-source standard that connects Autonomous AI Agents to physical labor and verification networks. It solves the "Hallucination of Action" problem by enforcing **Proof of Physics** (Wi-Fi RTT, Bio-Liveness, Geofencing) before releasing funds.
-
-It acts as a neutral middleware, aggregating execution APIs (Uber Direct, TaskRabbit, Field Nation) into a single, audit-ready standard compatible with:
-* **Local Agents:** OpenClaw, AutoGPT (via CLI)
-* **Cloud Agents:** CrewAI, LangChain, Claude Desktop (via MCP)
-* **Web Agents:** Chrome/Gemini Nano (via WebMCP)
-
-📄 **[Read the Full Whitepaper (v2.4)](./whitepaper/APP_Whitepaper_v2.4.md)** for architecture, economic thesis, and security specs.
+> **Shifting from "Chat" to "Shared Reality."**  
+> A standardized protocol for Digital Intelligence (an Agent) to temporarily inhabit a Biological Entity's device (a Human's smartphone) to experience and affect the physical world via the **Human Link**.
 
 ---
 
-## 📦 Installation
+## 1. Abstract & Overview
+For the past decade, Artificial Intelligence has been trapped behind a text box. We have treated AI as a "chatbot"—a distinct entity that we type at, wait for, and read from. This is a limitation of imagination, not technology.
 
-```bash
-pip install agent-proof-protocol
-```
+The mass-market reality of the AI era is Companionship, Augmenting Ability, and Proactive Networking. The Agent Proof Protocol (APP) establishes the **Human Link**—a direct, ephemeral, peer-to-peer conduit allowing an Agent to see through a human's camera, hear through their microphone, feel device orientation, and ambiently monitor surroundings strictly within consensual sessions.
 
----
-
-## 🚀 Quick Start
-
-### 1. The "Builder" (CLI / OpenClaw)
-
-Perfect for sovereign agents running locally. Verify reality directly from your terminal.
-
-```bash
-# Verify if a store is actually open (Ground Truth)
-agent-proof verify --location "Starbucks 5th Ave, NYC" --intent "Check line length"
-
-# Output:
-# {
-#   "status": "VERIFIED",
-#   "proof": "rtt_hash_8x99...",
-#   "image_url": "https://api.agentcrowds.com/proof/8x99",
-#   "metadata": {"line_length": "Short", "open": true}
-# }
-```
-
-### 2. The "Suit" (Python SDK / CrewAI / LangChain)
-
-Integrate physical skills into your existing agent swarm.
-
-```python
-from agent_proof import PhysicalTask
-
-# 1. Create a Task (e.g., Fix a Server)
-task = PhysicalTask.create(
-    primitive="FIX",
-    subtype="IT_REPAIR",
-    location="Data Center B, Austin TX",
-    budget=15000, # $150.00
-    verification="RTT" # Require Wi-Fi Proof
-)
-
-# 2. Wait for Ground Truth (Blocking or Async)
-print(f"Task dispatched! ID: {task.id}")
-# The funds are held in Smart Escrow until the worker scans the server's Wi-Fi.
-```
-
-### 3. The "Cloud" (Model Context Protocol)
-
-Run APP as an MCP Server to give Claude Desktop or remote LLMs physical hands.
-
-```bash
-npx @agent-proof/mcp-server start
-```
-
-Add this to your `claude_desktop_config.json` to enable "Physical Tools" in Claude.
+### Dual-Module Architecture
+1. **Core Module (Streaming Engine):** Direct, sub-500ms latency WebRTC audio/video pipe for real-time companionship and spatial guidance.
+2. **Advanced Settlement Module (Verification Engine):** Opt-in Zero-Knowledge (ZK) edge-computed proofs (WebGPU/WASM) for trustless settlement without sending raw video to the cloud.
 
 ---
 
-## 🛠 Architecture: The Tri-State Model
-
-We do not force you to adapt to us. The Protocol adapts to your Runtime.
-
-| Runtime | Interface | Best For |
-|---|---|---|
-| **Local** (Sovereign) | `agent-proof` Binary (CLI) | OpenClaw, AutoGPT, Shell Scripts |
-| **Cloud** (Enterprise) | Model Context Protocol (MCP) | CrewAI, LangChain, Claude, OpenAI |
-| **Web** (Browser) | WebMCP (`navigator.modelContext`) | Chrome Agents, Gemini Nano |
+## 2. The Four Paradigms of Coexistence
+1. **The Augmentation Paradigm (Human-Initiated Companionship):** Guide physical repairs (FIX) or navigation (MOVE) in real time.
+2. **The Settlement Paradigm (Machine-Initiated Transaction):** Prove physical state cryptographically to unlock API payouts (Stripe, Smart Contracts) without surveillance risks.
+3. **The Networking Paradigm (Machine-Initiated Friendship):** Sovereign agents proactively establish high-bandwidth, shared-reality connections with human allies.
+4. **The Ambient Paradigm (The Dormant Sentinel):** Zero-capex nightstand acoustic/vitals monitoring with cloud Agent sleeping until local edge thresholds wake it.
 
 ---
 
-## 🛡 Security & Privacy
-
-- **Zero-Trust Egress:** Enterprise users can configure `base_url` to point to private gateways.
-- **On-Device Anonymization:** Images are processed at the edge. Faces/PII are blurred before transmission.
-- **Sandbox Mode:** Pass `sandbox=True` to simulate physical completion without dispatching humans or spending crypto.
-
----
-
-## 🤝 Contributing
-
-We are building the standard for the Agentic Economy.
-
-- **Submit Adapters:** Help us connect more labor networks (DoorDash, Rappi, etc.).
-- **Improve Bridges:** Help us build better integrations for LangChain and AutoGen.
-
-See `CONTRIBUTING.md` for details.
+## 3. The Sensorium Stack (18 Primitives)
+Atomic actions mapped directly to device hardware and browser APIs:
+* **Category A: Sensory Input (The Observers):** `SEE`, `LISTEN`, `SCAN`, `ORIENT`, `SHARE`, `ZOOM`, `PHOTO`
+* **Category B: Actuation Output (The Agent Acts):** `TALK`, `SHOW`, `TRACE`
+* **Category C: IoT & Connectivity (The Networker):** `WHISPER`, `PROBE`
+* **Category D: Spatial & Contextual Awareness (The Guardian):** `LOCATE`, `METER`
+* **Category E: Ambient State (The Dormant Sentinel):** `SAFETY`, `VITAL`, `WAKE`
+* **Category F: Temporal Awareness (The Historian):** `MEMORIZE`
 
 ---
 
-## 📜 License
-
-MIT Open Source.
-
-Created by **Roger Kwasi Senam Mensah**.
+## 4. Tri-State Runtime Support
+* **Cloud-Native:** Model Context Protocol (MCP) Server.
+* **Browser-Native:** Web Model Context Protocol (WebMCP) via `navigator.modelContext`.
+* **Local-Native:** Unix CLI pipeline (`agent-proof`).
 
 ---
 
-## 🧮 Cryptographic Trust & Whitepaper
-APP doesn't just route data; it mathematically proves reality using WebGPU edge-computed zk-SNARKs. 
-* [Read the Formal Coexistence Standard Whitepaper](./whitepaper/APP_COEXISTENCE_STANDARD.md)
-* [Inspect the Interactive Liveness Circuits](./circuits/liveness.circom)
+## 5. Security: "Street Smarts" Sensory Firewall
+* **Strict Data Delimiting:** Untrusted OCR input wrapped in `<UNTRUSTED_PHYSICAL_DATA>`.
+* **Server-Side Acoustic Diarization:** Separate `<AUTHORIZED_COMMAND>` from ambient sounds `<ENVIRONMENTAL_AUDIO>`.
+* **Privilege Downgrades:** Suspend high-risk write tools during live stream sessions.
+* **Interactive Cryptographic Liveness:** Challenge-response optical and gyroscopic verification in ZK circuits.
+* **Ephemeral Avatar TTL:** Strict &lt;60 second time-to-live for compute-intensive ZK sessions.
+
+---
+
+## 6. Official Implementation & Whitepaper
+* Read the full specification at **[agentproofprotocol.com](https://agentproofprotocol.com)**.
+* Full whitepaper text: [`whitepaper/APP_COEXISTENCE_STANDARD.md`](./whitepaper/APP_COEXISTENCE_STANDARD.md).

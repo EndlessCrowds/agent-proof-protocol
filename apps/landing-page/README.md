@@ -1,14 +1,22 @@
-# Agent Proof Protocol - Landing Page
+# Agent Proof Protocol - Official Website
+**The Coexistence Standard** — [agentproofprotocol.com](https://agentproofprotocol.com)
 
-### 💳 The Agent Proof Protocol: Bridging Visa, Mastercard, Payman, and Web3
-APP v2.1 is the first protocol to bridge the gap between AI Agents and the Global Financial System.
-* **Universal Settlement:** Supports **Mastercard Agent Pay**, **Visa TAP**, and **Payman.ai**.
-* **Crypto Native:** Lightning Network (L402), ERC-20 (Base, Polygon).
-* **Corporate Finance:** **Mastercard Agent Pay** & **Visa TAP** (Virtual Card Issuance).
-* **Fiat Bridges:** **Payman.ai** (Agent-to-Bank Transfers).
+Built with Next.js (App Router), React 19, TypeScript, and Tailwind CSS.
 
 ## Getting Started
-Run the development server:
+
 ```bash
+# Navigate to the landing page app directory
+cd apps/landing-page
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
+
+# Run production build
+npm run build
 ```
+
+Open [http://localhost:3000](http://localhost:3000) to view the protocol site locally.
