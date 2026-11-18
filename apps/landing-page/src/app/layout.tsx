@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 
 export const metadata: Metadata = {
-  title: "Agent Proof Protocol (APP) v2.4 — The Universal Execution Standard",
-  description: "The Universal Execution Standard for the AI Agent Economy. Unifying Global Financial Rails, MCP, WebMCP, Unix Pipelines, Logistics & Labor Marketplace APIs, and Cryptographic Trust.",
+  title: "The Agent Proof Protocol (APP) — The Coexistence Standard",
+  description: "The Coexistence Standard: Shifting from Chat to Shared Reality. A standardized method for Digital Intelligence to temporarily inhabit a Biological Entity's device via the Human Link.",
 };
 
 export default function RootLayout({

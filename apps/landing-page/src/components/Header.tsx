@@ -8,8 +8,8 @@ export default function Header() {
                 <Link href="/" className="text-slate-900 font-semibold text-lg tracking-tight hover:text-blue-600 transition-colors">
                     Agent Proof Protocol
                 </Link>
-                <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 border border-slate-200">
-                    v2.4
+                <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                    The Coexistence Standard
                 </span>
             </div>
 

@@ -8,45 +8,53 @@ const NAV_ITEMS = [
     {
         category: "Overview",
         items: [
-            { label: "Abstract", href: "#abstract" },
-            { label: "1. Introduction", href: "#section-1" },
-            { label: "1.1 From Retrieval to Action", href: "#section-1-1" },
-            { label: "1.2 The Trust & Runtime Gap", href: "#section-1-2" },
-            { label: "1.3 The APP Mandate", href: "#section-1-3" },
-            { label: "2. Problem Statement", href: "#section-2" },
+            { label: "1. Abstract", href: "#abstract" },
+            { label: "2. The Problem: Sensory Gap", href: "#section-2" },
         ]
     },
     {
-        category: "Core Protocol",
+        category: "Paradigms of Coexistence",
         items: [
-            { label: "3. Economic Thesis", href: "#section-3" },
-            { label: "3.1 Tier 1: Partner Network", href: "#section-3-1" },
-            { label: "3.2 Tier 2: Human Grid", href: "#section-3-2" },
-            { label: "3.3 Distribution Strategy", href: "#section-3-3" },
-            { label: "4. Architecture", href: "#section-4" },
-            { label: "4.1 Input Schema", href: "#section-4-1" },
-            { label: "4.2 Labor Primitives", href: "#section-4-2" },
-            { label: "4.3 Access Control", href: "#section-4-3" },
-            { label: "4.4 Human Grid Fallback", href: "#section-4-4" },
-            { label: "4.5 Tri-State Integration", href: "#section-4-5" },
-            { label: "4.6 A2UI Interface Layer", href: "#section-4-6" },
-            { label: "4.7 Orchestration", href: "#section-4-7" },
+            { label: "3. Three Paradigms", href: "#section-3" },
+            { label: "3.1 Augmentation Paradigm", href: "#section-3-1" },
+            { label: "3.2 Settlement Paradigm", href: "#section-3-2" },
+            { label: "3.3 Networking Paradigm", href: "#section-3-3" },
+            { label: "3.4 Ambient Paradigm", href: "#section-3-4" },
         ]
     },
     {
-        category: "Infrastructure",
+        category: "Architecture & Sensorium",
         items: [
-            { label: "5. Trust & DePIN", href: "#section-5" },
-            { label: "6. Financial Unification", href: "#section-6" },
+            { label: "4. The Dual-Pipe System", href: "#section-4" },
+            { label: "4.1 Thermal & Ephemeral Avatar", href: "#section-4-1" },
+            { label: "5. The 18 Primitives", href: "#section-5" },
+            { label: "Category A: Sensory Input", href: "#section-5-a" },
+            { label: "Category B: Actuation Output", href: "#section-5-b" },
+            { label: "Category C: IoT & Connectivity", href: "#section-5-c" },
+            { label: "Category D: Spatial Awareness", href: "#section-5-d" },
+            { label: "Category E: Ambient State", href: "#section-5-e" },
+            { label: "Category F: Temporal Awareness", href: "#section-5-f" },
         ]
     },
     {
-        category: "Reference",
+        category: "Integration & Security",
         items: [
-            { label: "7. Implementation Guide", href: "#section-7" },
-            { label: "8. Conclusion", href: "#section-8" },
-            { label: "Appendix A: Adapters", href: "#appendix-a" },
-            { label: "Appendix B: API Docs", href: "#appendix-b" },
+            { label: "6. Tri-State Runtime", href: "#section-6" },
+            { label: "7. Financial Unification", href: "#section-7" },
+            { label: "8. Security: Street Smarts", href: "#section-8" },
+            { label: "8.1 Defeating Injection", href: "#section-8-1" },
+            { label: "8.2 Protecting the Human", href: "#section-8-2" },
+            { label: "8.3 Protecting Transaction", href: "#section-8-3" },
+            { label: "8.4 Behavioral Due Diligence", href: "#section-8-4" },
+        ]
+    },
+    {
+        category: "Execution & Reference",
+        items: [
+            { label: "9. Protocol Flow & Implementation", href: "#section-9" },
+            { label: "10. Conclusion: Symbiotic Web", href: "#section-10" },
+            { label: "Appendix A: Cryptographic Math", href: "#appendix-a" },
+            { label: "Appendix B: Horizon Primitives", href: "#appendix-b" },
         ]
     }
 ];
@@ -94,13 +102,16 @@ export default function Sidebar() {
                             </h5>
                             <ul className="space-y-1">
                                 {section.items.map((item, i) => {
-                                    const isSubItem = item.label.match(/^\d+\.\d/);
+                                    const isSubItem = item.label.match(/^\d+\.\d/) || item.label.startsWith("Category ");
                                     return (
                                         <li key={i}>
                                             <Link
                                                 href={item.href}
                                                 onClick={closeMenu}
-                                                className={`block text-[13px] text-slate-500 hover:text-blue-600 hover:translate-x-0.5 transition-all ${isSubItem ? 'pl-3 text-[12px]' : 'font-medium text-slate-700'}`}
+                                                className={`
+                                                    block py-1 text-sm rounded transition-colors
+                                                    ${isSubItem ? 'pl-4 text-xs text-slate-500 hover:text-slate-900' : 'text-slate-600 font-medium hover:text-slate-900'}
+                                                `}
                                             >
                                                 {item.label}
                                             </Link>
@@ -110,17 +121,6 @@ export default function Sidebar() {
                             </ul>
                         </div>
                     ))}
-
-                    <div className="pt-4 border-t border-slate-100 mt-4 pb-24 lg:pb-0">
-                        <Link
-                            href="https://github.com/EndlessCrowds/agent-proof-protocol"
-                            target="_blank"
-                            onClick={closeMenu}
-                            className="flex items-center gap-2 text-xs text-slate-500 hover:text-slate-900"
-                        >
-                            <span>SOURCE REPOSITORY</span>
-                        </Link>
-                    </div>
                 </nav>
             </aside>
         </>
